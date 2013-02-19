@@ -41,12 +41,12 @@ $pdf : rgb(248,58,48);
 
 @mixin box($color){
 	display: inline-block;
-	background: $color;
+	background-color: $color;
 	padding: .7em;
 	color: white;
 	border: none;
 	&:hover, &:focus {
-		background: darken($color, 5);
+		background-color: darken($color, 5);
 	}
 }
 @mixin speechbubble(){
