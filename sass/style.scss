@@ -383,8 +383,19 @@ aside {
 
 .honcode {
 	@extend .nicetype;
-	padding: 1em;
+	padding-left: 1em;
+	padding-right: 1em;
+	p {
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
 	background: $lightgray;
+	max-height: 0;
+	overflow: hidden;
+	@include transition(1.3s, max-height);
+	&.active{
+		max-height: 207em;
+	}
 }
 .show-honcode {
 	@include box($accent);
