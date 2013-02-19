@@ -1,0 +1,167 @@
+.meta {
+	color: gray;
+	padding-top: 0;
+	font-size: 0.8em;
+}
+.home article p {
+	padding: 1em;
+}
+body:not(.home) {
+	[role='main']{
+	padding: 1em;
+			@include breakpoint(m){
+				padding-left: 3%;
+			}
+	}
+footer.entry-meta {
+	width: 100%;
+	color: lightgray;
+	padding: 0;
+	&:before {
+		content: '\1F4C1';
+		@extend .iconfont;
+	}
+	a {
+		color: $accent;
+	}
+}
+
+.secondary {
+	@media(min-width: 40em){
+		width: 25%;
+		float: right;
+	}
+	background: $lightgray;
+}
+
+article {
+
+	p{
+		line-height: 1.7em;
+		padding-right: 1em;
+	}
+	blockquote {
+		background: $lightgray;
+		padding: 1em;
+		font-family: georgia;
+		font-style: italic;
+		@media (min-width: 40em){
+			width: 60%;
+		}
+		border-left: .3em solid $accent;
+	}
+		
+	h2 a:link, h2 a:visited {
+		color: rgb(50,50,50);
+		font-size: 1.5em;
+		font-weight: 100;
+		line-height: 1.4em;
+	}
+	
+	p:last-child{
+		@extend .clearfix;
+	}
+		
+	header {
+		border: none;
+		padding-bottom: 1em;
+		width: 100%;
+		h1 {
+			line-height: 1.5em;
+		}
+		
+		.entry-meta {
+			color: gray;
+			font-size: 0.4em;
+			padding-top: 1em;
+			a:link, a:visited {
+				color: $accent;
+			}
+		}
+	}
+}
+}
+
+.tags:before {
+	content: '\E70C';
+	@extend .iconfont;
+}
+
+.wp-caption {
+	margin: 1em;
+	@extend .shadow;
+	position: relative;
+}
+
+.wp-caption-text {
+	position: absolute;
+	bottom: 1em;
+	left: 1em;
+	@extend .shadow;
+	padding: 0.5em;
+	background: white;
+}
+
+.single article, .page article {
+	p {
+		color: rgb(50,50,50);
+		margin-bottom: 1em;
+	}
+	
+	ul {
+		list-style: circle outside;
+		padding-left: 1em;
+		line-height: 1.6em;
+		li {
+			margin-bottom: 0.2em;
+		}
+	}
+	h2 {
+		padding-top: 1em;
+		padding-bottom: 1em;
+		font-size: 1.3em;
+		font-weight: 500;
+		display: inline-block;
+		margin-bottom: 0.2em;
+	}
+}
+
+.alignleft {
+	@media (min-width:40em){
+		float: left;
+	}
+	
+}
+
+
+.blog article, .news article {
+	border-bottom: 1px solid lightgray;
+	padding-bottom: 1em;
+	margin-bottom: 2em;
+	h2 {
+		font-size: 1.04em;
+		@media(min-width: 30em){
+			font-size: 1.1em;
+		}
+	}
+	&:last-child{
+		border-bottom: 0;
+	}
+	p a {
+		@include box($accent);
+		padding: .5em;
+		display: block;
+		width: 6em;
+	}
+}
+//SEARCH FORMS
+#searchform {
+	[type='search']{
+		padding: .7em;
+	}
+	[type='submit']{
+		@include box($accent);
+		@include metro(0);
+	}
+}
+

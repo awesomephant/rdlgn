@@ -1,0 +1,145 @@
+﻿.comments-area {
+	h3 {
+		font-size: 1.5em;
+		font-weight: 100;
+		padding: 0.4em;
+	}
+	.comment-notes {
+		color: gray;
+		padding: 0.8em;
+	}
+	padding-bottom: 0.5em;
+	padding-top: 0.5em;
+	
+	.form-allowed-tags {
+		display: none;
+	}
+	form {
+		
+	@extend .clearfix;
+	
+		textarea, input {
+			width: 98%;
+			margin: 0 auto;
+			display: block;
+			font-family: open sans, sans-serif;
+			
+
+			
+			&:focus {
+				background: lighten($yellow, 12);
+				border: 1px solid $accent;
+			}
+		}
+		textarea{
+			padding: 1em;
+			margin-bottom: 0.5em;
+		}
+		
+		label {
+			padding: 1%;
+		}
+		input {
+			margin-bottom: 1.2em;
+			padding: 0.5em;
+		
+			&:valid {
+				//background: green;
+			}
+			&:invalid {
+				//background: green;
+			}
+		}
+		
+		
+		[type="submit"]{
+			border:none;
+			background: $accent;
+			color: white;
+			font-weight: 900;
+			font-size: 1.1em;
+			cursor: pointer;
+			
+			&:hover, &:focus {
+				background: darken($accent, 5);
+			}
+		}
+	}
+}
+
+.comment-content {
+	border-bottom: 1px solid lightgray;
+	padding: 1em;
+}
+		
+.commentlist {
+	
+	.reply a{
+		@include box($accent);
+		font-size: .9em;
+		margin: 0;
+		@extend .clearfix;
+		}
+
+	
+	footer {
+		img {
+			display: inline-block;
+		}
+	}
+	
+	article {
+		width: 100%;
+
+		& + .children {
+			padding-left: 2em;
+			margin-bottom: 2em;
+			.comment-content {
+				margin-top: 0;
+				float: none;
+				display: inline-block;
+				background: rgb(250,250,250);
+			}
+		}
+		footer {
+			width: 100%;
+			.comment-author {
+			
+			@extend .clearfix;	
+				img {
+					box-shadow: 0 0 0 .4em white;
+					border-radius: 20em;
+					float: left;
+					min-width: 0;
+					width: 4em;
+					display: block;
+					margin-right: 1.5em;
+				}
+				cite {
+					font-size: 1.4em;
+					color: gray;
+					padding-top: .2em;
+				}
+				a {
+					display: block;
+					font-style: italic;
+					color: $accent;
+				}
+			}
+		}
+				
+
+		
+	}
+}
+.comments-title {
+	&:before {
+		@extend .iconfont;
+		content: '';
+		
+	}
+}
+#respond {
+	background: $lightgray;	
+	padding-bottom: 0.1em;
+}

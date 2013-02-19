@@ -1,0 +1,173 @@
+.home {
+ 
+.entry-title {
+	display: none;
+}
+.blog {
+	@media (min-width: 55em){
+		margin-left: 1em;
+	}
+}
+.blog, .news {
+	padding-top: 5em;
+	padding-right: 1em;
+	background: trasparent;
+	@include breakpoint(m){
+		width: 48%;
+		float: left;
+	}
+	h1 {
+		margin: 0;
+		padding: 0;
+		font-size: 1.7em;
+		padding-bottom: .8em;
+		
+		&:hover {
+			color: rgb(70,70,70);
+		}
+	}
+	
+	.entry-meta {
+		margin: 0;
+		padding: 0;
+	}
+	li{
+	font-size: 0.9em;
+	width: 100%;
+	border-bottom: 1px solid lightgray;
+	&:last-child {
+		border-bottom: 0;
+	} 
+	a {
+		display: block;
+		width: 100%;
+		padding: 1em 1em 1em 0;
+		
+		&:hover, &:focus {
+			background: white;
+		}
+	}
+	}
+}
+
+.intro{
+	.entry-content {
+		@include breakpoint(l){
+			width: 66%;
+			font-size: 1.05em;
+		}
+	}
+	& > p {
+	    font-size: 1.1em;
+		letter-spacing: .03em;
+	}
+	p {
+        @extend .nicetype;
+    	color: rgb(70,70,70);
+     	padding: 0;
+        
+    }
+}
+}
+.teaser {
+	float: left;
+	display: inline-block;
+	padding-right: 1em;
+	margin-top: 2em;
+	padding-bottom: 2em;
+	@include breakpoint(l){
+		padding-left: 1em;
+		padding-bottom: 0em;
+	}
+	&:nth-of-type(1) {
+		padding-left: 0;
+	}
+	@include breakpoint(l){
+		width: 33%;
+		border-right: 1px solid lightgray;
+	}
+	
+	&.last {
+		border-right: none;
+	}
+
+	h2 {
+		font-size: 1.7em;
+		font-weight: 100;
+		padding-bottom: .3em;
+	}
+	img {
+		width: 100%;
+	}
+	a {
+		@include box($accent);
+	}
+	p {
+		text-align: justify;
+		-moz-hyphens: auto;
+	}
+}
+
+
+.home .banner {
+position: static;
+		
+	img {
+		width: 100%;
+	}
+	figcaption {
+		position: static;
+		background: $lightgray;
+		@include breakpoint(m){
+			position: absolute;	
+			background: $accent;
+			color: rgb(250,250,250);
+			text-align: right;
+			box-shadow: 0 .2em 0 0 lighten($accent, 5);
+			font-size: 1.4em;
+			border-bottom: none;
+		}
+		bottom: 1em;
+		right: 1em;
+		left: auto;
+		line-height: 1.3em;
+		max-width: 25em;
+		font-weight: 400;
+		padding: .5em;
+		font-size: 1.2em;
+		border-bottom: 1px solid $lightgray;
+		display: block;
+		
+	}
+}
+
+.comment-count:before {
+	content: '\E718';
+	@extend .iconfont;
+	padding-left: 1em;
+	font-size: 2.5em;
+	color: $accent;
+	position: relative;
+	top: .1em;
+	display: inline-block;
+	padding-right: .2em;
+}
+
+.feeds, .intro {
+	padding-left: 1em;
+	padding-right: 1em;
+	@include breakpoint(s){
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+	@include breakpoint(m){
+		padding-left: 4em;
+		padding-right: 4em;
+	}
+}
+
+.feeds {
+	border-top: 1px solid darken($lightgray, 2);
+	background: $lightgray;
+	margin-bottom: 0;
+}

@@ -1,0 +1,58 @@
+.secondary {
+	@media (min-width:70em){
+		width: 25%;
+		float: left;
+	}
+	aside {
+		float: none;
+		border-bottom: 1px solid lightgray;
+		width: 95%;
+		padding: 1em;
+		margin-bottom: 1em;
+		margin-left: 1em;
+		color: rgb(50,50,50);
+		
+		ol li, ul li {
+			padding-top: 0.5em;
+			margin-left: 1em;
+			list-style: outside decimal;
+		}
+		a:link, a:visited {
+			text-decoration: none;
+			color: $accent;
+			display: inline-block;
+			padding: 0.5em;
+		}
+		a:hover, a:focus {
+			color: darken($accent, 10);
+		}
+	}
+	@extend .clearfix;
+}
+
+#wp-calendar {
+	width: 100%;
+	caption {
+		font-weight: bold;
+		text-align: left;
+		padding-bottom: 0.5em;
+	}
+	tr:nth-child(odd){
+		background: lighten($yellow, 8);
+	}
+	th {
+		background: $lightgray;
+		font-weight: bold;
+		
+	}
+	#today {
+		background: $yellow;
+	}
+	td {
+		padding: 0.4em;
+		a {
+			display: inline;
+			padding: 0;
+		}
+	}
+}
