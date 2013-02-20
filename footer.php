@@ -15,10 +15,16 @@
 			<nav>
 				<?php wp_nav_menu( array( 'theme_location' => 'secondary' ) ); ?>
 			</nav>
-			<a class='mammo'href="http://www.mammo-programm.de/startseite/startseite.php"><span>Mammografie-Screening</span></a>
-			<a class='imed' href="#"><span>Nach IMED-Standard zertifiziert</span></a>
+			<div class='partners'>
+			<a title="Mammografie Screening" href="http://www.mammo-programm.de/startseite/startseite.php">
+				<img alt="Mammografie Screening Logo" src="<?php bloginfo('template_directory'); ?>/images/mammo.png">
+			</a>
+			<a title="Nach IMED-Standard zertifiziert" href="#">
+				<img alt="Mammografie Screening Logo" src="<?php bloginfo('template_directory'); ?>/images/imed.png">
+			</a>
+			</div>
 		</footer>
-		<p>Copyright &copy; 2011 Gemeinschaftspraxis Prof. Dr. Hansj&ouml;rg Zwicker und Partner.</p>
+		<p class="copyright">Copyright &copy; 2011 Gemeinschaftspraxis Prof. Dr. Hansj&ouml;rg Zwicker und Partner.</p>
 
 
 <?php wp_footer(); ?>
