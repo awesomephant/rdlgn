@@ -1,20 +1,17 @@
 $('document').ready(function(){
-
-	$('.honcode').hide();	
 	$('.show-honcode').click(function(){
-		$(this).toggleClass('active');
-		$('.honcode').slideToggle(1500);
+		$('.honcode').toggleClass('active');
 	})
 	
 	
 	$('header nav > div > ul > li').click(function(e){
 		//e.preventDefault();
 		//$('header nav li').removeClass('active');
-		
-		if( $(this).hasClass('active') ){
+		if ( $(this).hasClass('active') ){
 			$(this).removeClass('active');
 		}
 		else {
+			$('header nav li').removeClass('active');
 			$(this).addClass('active');
 		}
 		
@@ -23,11 +20,11 @@ $('document').ready(function(){
 	
 	//$('header nav').hide();
 	$('.toggleNav').click(function(){
-		//$('header nav').toggleClass('active');
+		$('header nav').toggleClass('active');
 	})
 	
 	$('.banner').flexslider({
-		animation: "slide"
+		animation: "fade"
 	});
 
 	

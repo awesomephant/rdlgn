@@ -1,5 +1,4 @@
 .home {
- 
 .entry-title {
 	display: none;
 }
@@ -11,7 +10,6 @@
 .blog, .news {
 	padding-top: 5em;
 	padding-right: 1em;
-	background: trasparent;
 	@include breakpoint(m){
 		width: 48%;
 		float: left;
