@@ -1,12 +1,9 @@
 .secondary {
-	@media (min-width:70em){
-		width: 25%;
-		float: left;
-	}
+	width: 100%;
+}
 	aside {
 		float: none;
 		border-bottom: 1px solid lightgray;
-		width: 95%;
 		padding: 1em;
 		margin-bottom: 1em;
 		margin-left: 1em;
@@ -27,8 +24,7 @@
 			color: darken($accent, 10);
 		}
 	}
-	@extend .clearfix;
-}
+
 
 #wp-calendar {
 	width: 100%;

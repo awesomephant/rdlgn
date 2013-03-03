@@ -322,15 +322,6 @@ body:not(.home){
 	}
 }
 
-//===============
-//Sub-Navigation
-//===============
-aside {
-	@include breakpoint(m){
-		width: 25%;
-		float: left;
-	}
-}
 
 
 
@@ -352,7 +343,6 @@ aside {
 .primary {
 		@include breakpoint(l){
 		width: 75%;
-		float: left;
 	}
 }
 

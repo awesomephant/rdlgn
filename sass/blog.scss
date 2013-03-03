@@ -7,12 +7,7 @@
 	padding: 1em;
 }
 body:not(.home) {
-	[role='main']{
-	padding: 1em;
-			@include breakpoint(m){
-				padding-left: 3%;
-			}
-	}
+
 footer.entry-meta {
 	width: 100%;
 	color: lightgray;
@@ -26,13 +21,7 @@ footer.entry-meta {
 	}
 }
 
-.secondary {
-	@media(min-width: 40em){
-		width: 25%;
-		float: right;
-	}
-	background: $lightgray;
-}
+
 
 article {
 
@@ -72,12 +61,23 @@ article {
 		width: 100%;
 		h1 {
 			line-height: 1.5em;
+			font-family: georgia;
+			padding-top: 1em;
+			font-size: 2em;
 		}
 		
 		.entry-meta {
 			color: gray;
+			border-bottom: 5px solid $lightgray;
 			font-size: 0.4em;
 			padding-top: 1em;
+			padding-bottom: 1em;
+			
+			.author {
+				font-weight: 900;
+				text-transform: uppercase;
+				color: black;
+			}
 			a:link, a:visited {
 				color: $accent;
 			}
@@ -168,4 +168,24 @@ article {
 		@include metro(0);
 	}
 }
+.primary {
+	padding-left: 10%;
+}
+.secondary {
+	background: $lightgray;
+}
+.comments, .sidebar {
+}
+.comments {
+	padding-left: 10%;
+	width: 60%;
+	float: left;
+	padding-right: 2.5%;
+}
 
+.sidebar {
+	width: 35%;
+	border-left: 1px solid darken($lightgray, 5);
+	padding-left: 2.5%;
+	display: inline-block;
+}
