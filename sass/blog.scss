@@ -59,12 +59,6 @@ article {
 		border: none;
 		padding-bottom: 1em;
 		width: 100%;
-		h1 {
-			line-height: 1.5em;
-			font-family: georgia;
-			padding-top: 1em;
-			font-size: 2em;
-		}
 		
 		.entry-meta {
 			color: gray;
@@ -137,7 +131,23 @@ article {
 	
 }
 
+.single-post {
+	.entry-title {
+		line-height: 1.5em;
+		font-family: georgia;
+		padding-top: 1em;
+		@include breakpoint(m){
+			font-size: 1.2em;
+		}
+		@include breakpoint(l){
+			font-size: 1.9em;
+		}
+		@include breakpoint(xl){
+			font-size: 2.1em;
+		}
+	}
 
+}
 .blog article, .news article {
 	border-bottom: 1px solid lightgray;
 	padding-bottom: 1em;

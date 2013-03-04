@@ -28,6 +28,9 @@ $pdf : rgb(248,58,48);
 }
 
 @mixin breakpoint($point) {
+  @if $point == xl {
+    @media (min-width: 60em) { @content; }
+  }
   @if $point == l {
     @media (min-width: 50em) { @content; }
   }
