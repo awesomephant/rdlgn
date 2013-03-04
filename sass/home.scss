@@ -25,7 +25,7 @@
 		padding-bottom: .8em;
 		
 		&:hover {
-			color: rgb(70,70,70);
+			color: rgb(120,120,120);
 		}
 	}
 	
@@ -33,17 +33,24 @@
 		margin: 0;
 		padding: 0;
 	}
+	.author {
+		color: white;
+		display: inline-block;
+		padding: .2em;
+		border-radius: 3px;
+		background: $accent;
+	}
 	li{
-	font-size: 0.9em;
-	width: 100%;
-	border-bottom: 1px solid lightgray;
+		font-size: 0.9em;
+		width: 100%;
+		border-bottom: 1px solid lightgray;
 	&:last-child {
 		border-bottom: 0;
 	} 
 	a {
 		display: block;
 		width: 100%;
-		padding: 1em 1em 1em 0;
+		padding: 1em 1em 1em 1em;
 		
 		&:hover, &:focus {
 			background: white;
@@ -148,7 +155,6 @@ position: static;
 	@extend .iconfont;
 	padding-left: 1em;
 	font-size: 2.5em;
-	color: $accent;
 	position: relative;
 	top: .1em;
 	display: inline-block;
