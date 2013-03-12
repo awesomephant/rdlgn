@@ -23,17 +23,19 @@ get_header(); ?>
 		</div><!-- #primary .content-area -->
 		<section class='secondary'>	
 		<section class='comments'>
-				<?php
+			<h2>Kommentare</h2>
+			<?php
 					// If comments are open or we have at least one comment, load up the comment template
 					if ( comments_open() || '0' != get_comments_number() )
 						comments_template( '', true );
 				?>
 			</section>
 		<section class='sidebar'>
-		<?php if ( ! dynamic_sidebar() ) : ?>
-            <li>{static sidebar item 1}</li>
-            <li>{static sidebar item 2}</li>
-        <?php endif; ?>
+			<h2>Mehr auf 100nm</h2>
+			<?php if ( ! dynamic_sidebar() ) : ?>
+				<li>{static sidebar item 1}</li>
+				<li>{static sidebar item 2}</li>
+			<?php endif; ?>
 		
 		</section>	
 		</section>

@@ -71,12 +71,12 @@ function grid_comment( $comment, $args, $depth ) {
 		<article id="comment-<?php comment_ID(); ?>" class="comment">
 			<footer>
 				<div class="comment-author vcard">
-					<?php echo get_avatar( $comment, 220 ); ?>
+					<?php // echo get_avatar( $comment, 220 ); ?>
 					<?php printf( __( '%s ', 'grid' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 						<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time pubdate datetime="<?php comment_time( 'c' ); ?>">
 					<?php
-					/* translators: 1: date, 2: time */
-				printf( __( '%1$s at %2$s', 'grid' ), get_comment_date(), get_comment_time() ); ?>
+				$d = "d.m";
+				printf( __( '%1$s', 'grid' ), get_comment_date($d) ); ?>
 				</time></a>
 				</div><!-- .comment-author .vcard -->
 				<?php if ( $comment->comment_approved == '0' ) : ?>

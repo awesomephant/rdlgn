@@ -183,8 +183,14 @@ article {
 }
 .secondary {
 	background: $lightgray;
+	h2 {
+		font-family: georgia;
+		font-size: 2.3em;
+		padding-top: 1em;
+	}
 }
 .comments, .sidebar {
+	font-size: .8em;
 }
 .comments {
 	padding-left: 10%;

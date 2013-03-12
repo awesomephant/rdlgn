@@ -1,16 +1,9 @@
-<?php
-/**
- * The Header for our theme.
- *
- * Displays all of the <head> section and everything up till <div id="main">
- *
- * @package grid
- * @since grid 1.0
- */
-?><!doctype html>
-<html <?php language_attributes(); ?>>
+<!doctype html>
+
+<html <?php language_attributes();?>>
 	<head>
 		<meta charset="utf8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width" />
 		<title><?php
 	/*
@@ -37,11 +30,6 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/script.js"></script>
-
-<!--[if lt IE 9]>
-<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
-<![endif]-->
-
 
 <?php wp_head(); ?>
 </head>

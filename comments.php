@@ -22,17 +22,10 @@
 		return;
 ?>
 
-	<div id="comments" class="comments-area">
 
 	<?php // You can start editing here -- including this comment! ?>
 
 	<?php if ( have_comments() ) : ?>
-		<h2 class="comments-title">
-			<?php
-				printf( _n( 'Ein Kommentar', '%1$s Kommentare', get_comments_number(), 'grid' ),
-					number_format_i18n( get_comments_number() ));
-			?>
-		</h2>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav role="navigation" id="comment-nav-above" class="site-navigation comment-navigation">
@@ -73,4 +66,4 @@
 
 	<?php comment_form(); ?>
 
-</div><!-- #comments .comments-area -->
+

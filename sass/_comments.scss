@@ -1,4 +1,4 @@
-﻿.comments-area {
+﻿.comments {
 	h3 {
 		font-size: 1.5em;
 		font-weight: 100;
@@ -8,8 +8,6 @@
 		color: gray;
 		padding: 0.8em;
 	}
-	padding-bottom: 0.5em;
-	padding-top: 0.5em;
 	
 	.form-allowed-tags {
 		display: none;
@@ -68,8 +66,7 @@
 }
 
 .comment-content {
-	border-bottom: 1px solid lightgray;
-	padding: 1em;
+	padding: 0 1em;
 }
 		
 .commentlist {
@@ -80,13 +77,6 @@
 		margin: 0;
 		@extend .clearfix;
 		}
-
-	
-	footer {
-		img {
-			display: inline-block;
-		}
-	}
 	
 	article {
 		width: 100%;
@@ -102,29 +92,26 @@
 			}
 		}
 		footer {
-			width: 100%;
-			.comment-author {
-			
-			@extend .clearfix;	
-				img {
-					box-shadow: 0 0 0 .4em white;
-					border-radius: 20em;
-					float: left;
-					width: 4em;
-					height: auto;
-					display: block;
-					margin-right: 1.5em;
-				}
-				cite {
-					font-size: 1.4em;
-					color: gray;
-					padding-top: .2em;
-				}
-				a {
-					display: block;
-					font-style: italic;
-					color: $accent;
-				}
+			padding-bottom: 0;
+		}
+		.comment-author {
+			position: relative;
+			cite {
+				font-size: 2em;
+				font-family: georgia;
+				display: block;
+				padding: .6em 0;
+			}
+			time {
+				background: $accent;
+				border-radius: 3px 0 0 3px;
+				color: white;
+				font-size: 1.2em;
+				left: -5em;
+				padding: 0.7em;
+				position: absolute;
+				text-align: right;
+				top: 1em;
 			}
 		}
 				
@@ -132,14 +119,27 @@
 		
 	}
 }
-.comments-title {
-	&:before {
-		@extend .iconfont;
-		content: '';
-		
-	}
+
+
+li.comment {
+    border: 1px solid lightgray;
+    font-size: 13px;
+    border-radius: 5px;
 }
-#respond {
-	background: $lightgray;	
-	padding-bottom: 0.1em;
+
+.comment {
+	margin-bottom: 1em;
+	blockquote p{
+		padding: 0;
+		margin: 0;
+	}
+	
+	ol, ul {
+		margin: 0;
+		padding: 0;
+	}
+	
+	ol {
+		list-style: decimal inside;
+	}
 }

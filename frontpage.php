@@ -2,8 +2,7 @@
 /*
 Template Name: Startseite
 */
-?>
-<?php get_header(); ?>
+?><?php get_header(); ?>
 		<section class='banner'>
   	    <ul class='slides'>
 		<li>
@@ -48,8 +47,8 @@ Template Name: Startseite
 			</div>
 		</section>
 		<section class='feeds'>
-        <section class="news">
-			<a href=""><h1>Aktuelles.</h1></a>
+			<section class="news">
+			<a href="#"><h1>Aktuelles.</h1></a>
 			<ul>
 					<?php
 					$news = new WP_Query( 'category_name=aktuelles' );
@@ -88,7 +87,7 @@ Template Name: Startseite
 				<?php endif ?>
 
             </section>
-			</section>
+		</section>
         
 
 <?php get_footer(); ?>
