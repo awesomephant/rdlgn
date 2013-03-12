@@ -1,11 +1,10 @@
-.secondary {
-	width: 100%;
-}
-	aside {
+	.widget {
+		h1 {
+			padding: 0;
+			font-weight: bold;
+		}
 		float: none;
-		border-bottom: 1px solid lightgray;
-		padding: 1em;
-		margin-bottom: 1em;
+		margin-bottom: 4em;
 		margin-left: 1em;
 		color: rgb(50,50,50);
 		
