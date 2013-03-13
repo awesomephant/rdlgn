@@ -36,12 +36,13 @@
 
 <body <?php body_class(); ?>>
 <div class='nav-main'>
-			<nav role="navigation" class="site-navigation main-navigation clearfix">	
+	<nav role="navigation" class="site-navigation main-navigation clearfix">	
 				
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 				
-			</nav>
-		</div>
+	</nav>
+	<button class='nav-close'>&times;</button>
+</div>
 	<div class='page-container'>	
 		<header>
 			  <hgroup>

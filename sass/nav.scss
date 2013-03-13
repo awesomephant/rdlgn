@@ -14,24 +14,78 @@
 		}
 }	
 
+.hasChild{
+	&:after {
+		@extend .iconfont;
+		content: '\E75E';
+		display: inline-block;
+		width: 30%;
+		float: right;
+		position: relative;
+		top: -.5em;
+		text-align: right;
+		color: rgb(60,60,60)
+	}
+}
 .nav-main{  
 	position: absolute;
+	overflow: visible;
 	left: -25%;
+	z-index: 20;
+	height: 100%;
+	width: 25%;
 	background: white;
-	z-index: 10;
-	padding: 2em;
+	border-right: 1px solid $lightgray;
+	box-shadow: 14px 0px 25px -32px rgba(black, .7);
 	@include transition(.5s);
 	
 	.nav-active &{
 		left: 0;
 	}
+	a {
+		text-decoration: none;
+		padding: 1.1em 1.7em;
+		display: block;
+		color: rgb(50,50,50);
+		border-bottom: 1px solid $lightgray;
+		font-size: .9em;
+		
+		&:hover, &:focus {
+			background: $lightgray;
+		}
+	}
+
+	div > ul > li {
+		position: static;
+	}
 }
+.menu {}
+.sub-menu {
+	display: none;
+	@include transition(.5s);
+		
+	.active &{
+		display: block;
+	}
+	position: absolute;
+	height: 100%;
+	left: 100%;
+	width: 100%;
+	background: $lightgray;
+	top: 0;
+	z-index: -10;
+	
+	a {
+		border-bottom: 1px solid darken($lightgray, 5);
+	}
+}
+	
 .page-container {
 	@include transition(.5s);
 }
 .nav-active .page-container {
-	-moz-transform: translateX(200px);
-	-webkit-transform: translateX(200px);
+	-moz-transform: translateX(120px);
+	-webkit-transform: translateX(120px);
 	-webkit-filter: saturate(90%);
 }
 aside nav {
