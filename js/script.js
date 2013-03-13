@@ -20,7 +20,7 @@ $('document').ready(function(){
 	
 	//$('header nav').hide();
 	$('.toggleNav').click(function(){
-		$('header nav').toggleClass('active');
+		$('body').toggleClass('nav-active');
 	})
 	
 	$('.banner').flexslider({

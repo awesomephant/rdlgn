@@ -12,13 +12,6 @@
  */
 
 get_header(); ?>
-<aside>
-				<nav>
-<ul class="clearfix">
-    <?php wp_list_pages( array('title_li'=>'','depth'=>3,'child_of'=>get_post_top_ancestor_id()) ); ?>
-</ul>
-				</nav>
-			</aside>
 		<div id="primary" class="content-area">
 			<div id="content" class="site-content" role="main">
 				<?php if ( has_post_thumbnail() ) {
