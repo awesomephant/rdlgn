@@ -333,8 +333,9 @@ body:not(.home){
 	}
 }
 .primary {
-		@include breakpoint(l){
+		@include breakpoint(m){
 		width: 75%;
+		float: left;
 	}
 }
 
