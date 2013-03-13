@@ -35,18 +35,22 @@
 </head>
 
 <body <?php body_class(); ?>>
-
+<div class='nav-main'>
+	<nav role="navigation" class="site-navigation main-navigation clearfix">	
+				
+		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+				
+	</nav>
+	<button class='nav-close'>&times;</button>
+</div>
+	<div class='page-container'>	
 		<header>
 			  <hgroup>
                 <h1><a href=" <?php echo home_url(); ?> "><?php bloginfo( 'name' ); ?></a></h1>
                 <h2><?php bloginfo( 'description' ); ?></h2>
             </hgroup>
 			<button class='toggleNav'>Navigation</button>
-			<nav role="navigation" class="site-navigation main-navigation clearfix">	
-				
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-				
-			</nav><!-- .site-navigation .main-navigation -->
 		</header>
 	
-	<div role ="main">
+		<div role ="main">
+	

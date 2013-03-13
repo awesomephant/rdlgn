@@ -1,11 +1,8 @@
 .toggleNav {
 		@include box($accent);
-		width: 100%;
 		text-align: left;
+		padding-right: 4em;
 		position: relative;
-		@include breakpoint(s){
-			display: none;
-		}
 		&:after {
 			@extend .iconfont;
 			content: '\2630';
@@ -17,167 +14,79 @@
 		}
 }	
 
-header{  
-  nav {
-	max-height: 0;
-	overflow: hidden;
-	@include transition(.3s);
-		&.active {
-			max-height: 90em;
-			@include breakpoint(s){
-				max-height: 40em;
-			}
-		}
-	@include breakpoint(s){
-		max-height: none;
-	}
-	@include breakpoint(m){
-		padding-left: 4em;
-	}
-	font-size: .5em;
-	ul {
-	}
-	.menu > li a{
-		position: relative;
-		padding-top: 1em;
-		padding-bottom: 1em;
-		border-top: 1px solid lightgray;
-		@include breakpoint(s){
-			border-top: none;
-			padding: .5em;
-		}
-		&:after{
-			content: '\25BE';
-			@extend .iconfont;
-			position: absolute;
-			font-size: 3em;
-			top: -.35em;
-			right: 1em;
-			color: gray;
-			@include transition(.3s);
-			@include breakpoint(s){
-				display: none;
-			}
-		}
-		
-
-	}
-	
-	.active a:after {
-		-moz-transform-origin: 10px 30px;
-		-moz-transform: rotate(90deg);
-	}
-	li {
-		display: block;
-		border-top: 1px solid white;
-		
-		@include breakpoint(s){
-			display: inline-block;
-			border-top: none;
-			padding-top: 0;
-			padding-bottom: 0;
-		}
-		a {
-			display: block;
-			text-decoration: none;
-			color: rgb(50,50,50);
-			padding: .5em;
-			&:hover, &:focus, &.active {
-			color: black;
-				@include breakpoint(s){
-					background: $lightgray;
-				}
-			}
-		}
-		&.active .sub-menu{
-			max-height: 50em;
-		
-		}
-	}	
-	.sub-menu {
-		@include transition(.8s, max-height);
-		font-size: .95em;
-		max-height: 0;
-		overflow: hidden;
-		left: 0;
-		z-index: 10;
-		width: 100%;
-		background: $lightgray;
-		@include breakpoint(m){
-			padding-left: 4em;
-		}
-		@include breakpoint(s){
-			position: absolute;
-		}
-		li {
-		
-			float: none;
-		}
-		a {
-			color: gray;
-			&:after {
-				display: none;
-			}
-			&:hover, &:focus {
-				color: darken(gray, 10);
-			}
-		}
-		.sub-menu {
-		position: static;
-		float: left;
-		padding: 0;
-		margin-right: 3em;
+.hasChild{
+	&:after {
+		@extend .iconfont;
+		content: '\E75E';
 		display: inline-block;
-		@include cols(2);
-		@include breakpoint(s){
-			@include cols(1);
-		}
-			li {
-				margin: 0;
-				display: block;
-				float: none;
-			}
-			a {
-			color: $accent;
-			&:hover, &:focus {
-				color: darken($accent, 2);
-				text-decoration: underline;
-			}
-			}
-		}
-	}
-	
-	form {
+		width: 30%;
 		float: right;
-		width: 25em;
+		position: relative;
+		top: -.5em;
+		text-align: right;
+		color: rgb(60,60,60)
 	}
-	input[type="search"] {
-		border: 1px solid lightgray;
-		padding: 0.5em;
-		width: 12em;
-		@include transition(0.5s);
-		border-radius: 2px;
-		font-family: open sans, helvetica, arial, sans-serif;
-		 &:hover{
-			box-shadow: 0px 2px 2px -1px lightgray inset;
-		 }
-		 &:focus{
-			border: 1px solid $accent;
-			width : 15em;	
-			box-shadow: 0px 2px 2px -1px lightgray inset;
-		 
-		 }
+}
+.nav-main{  
+	position: absolute;
+	overflow: visible;
+	left: -25%;
+	z-index: 20;
+	height: 100%;
+	width: 25%;
+	background: white;
+	border-right: 1px solid $lightgray;
+	box-shadow: 14px 0px 25px -32px rgba(black, .7);
+	@include transition(.5s);
+	
+	.nav-active &{
+		left: 0;
 	}
-	[type="submit"]{
-		border: none;
-		@include metro(0);
-		@include box($accent);
-		cursor: pointer;
+	a {
+		text-decoration: none;
+		padding: 1.1em 1.7em;
+		display: block;
+		color: rgb(50,50,50);
+		border-bottom: 1px solid $lightgray;
+		font-size: .9em;
+		
+		&:hover, &:focus {
+			background: $lightgray;
+		}
 	}
-	label {
-		font-size: 0em;
+
+	div > ul > li {
+		position: static;
 	}
+}
+.menu {}
+.sub-menu {
+	display: none;
+	@include transition(.5s);
+		
+	.active &{
+		display: block;
 	}
+	position: absolute;
+	height: 100%;
+	left: 100%;
+	width: 100%;
+	background: $lightgray;
+	top: 0;
+	z-index: -10;
+	
+	a {
+		border-bottom: 1px solid darken($lightgray, 5);
+	}
+}
+	
+.page-container {
+	@include transition(.5s);
+}
+.nav-active .page-container {
+	-moz-transform: translateX(120px);
+	-webkit-transform: translateX(120px);
+	-webkit-filter: saturate(90%);
 }
 aside nav {
 	list-style:none;

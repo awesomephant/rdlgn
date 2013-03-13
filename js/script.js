@@ -4,7 +4,7 @@ $('document').ready(function(){
 	})
 	
 	
-	$('header nav > div > ul > li').click(function(e){
+	$('.nav-main nav > div > ul > li').click(function(e){
 		//e.preventDefault();
 		//$('header nav li').removeClass('active');
 		if ( $(this).hasClass('active') ){
@@ -18,10 +18,16 @@ $('document').ready(function(){
 		
 	})
 	
+	$('.nav-main li:has(ul) > a').addClass('hasChild');
+	
+	$('.nav-close').click(function(){
+		$('body').removeClass('nav-active');
+	});
+	
 	//$('header nav').hide();
 	$('.toggleNav').click(function(){
-		$('header nav').toggleClass('active');
-	})
+		$('body').toggleClass('nav-active');
+	});
 	
 	$('.banner').flexslider({
 		animation: "fade"
