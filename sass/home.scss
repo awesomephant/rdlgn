@@ -86,7 +86,6 @@
 	.entry-content {
 		@include breakpoint(l){
 			width: 66%;
-			font-size: 1.05em;
 		}
 	}
 	& > p {
@@ -94,7 +93,8 @@
 		letter-spacing: .03em;
 	}
 	p {
-        @extend .nicetype;
+        font-size: 1em;
+		@extend .nicetype;
     	color: rgb(70,70,70);
      	padding: 0;
         
@@ -126,17 +126,28 @@
 	h2 {
 		font-size: 1.7em;
 		font-weight: 100;
-		padding-bottom: .3em;
+		padding-bottom: .6em;
 	}
 	img {
 		width: 100%;
 	}
 	a {
+		position:relative;
+		
 		@include box($accent);
+		padding-right: 1.5em;
+		&:after {
+			@extend .iconfont;
+			content: ' \E75E';	
+			position: absolute;
+			right: .2em;
+			top: -.1em;
+		}
 	}
 	p {
-		text-align: justify;
-		-moz-hyphens: auto;
+		font-size: 1em;
+		color: rgb(60,60,60);
+		margin-bottom: 1em;
 	}
 }
 
