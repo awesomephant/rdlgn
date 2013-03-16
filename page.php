@@ -12,7 +12,8 @@
  */
 
 get_header(); ?>
-		<div id="primary" class="content-area">
+<?php get_sidebar(); ?>
+
 			<div id="content" class="site-content" role="main">
 				<?php if ( has_post_thumbnail() ) {
 					the_post_thumbnail();
@@ -26,6 +27,6 @@ get_header(); ?>
 
 			</div><!-- #content .site-content -->
 			
-		</div><!-- #primary .content-area -->
+
 
 <?php get_footer(); ?>

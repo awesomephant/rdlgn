@@ -25,12 +25,6 @@ $('document').ready(function(){
 		$('body').toggleClass('nav-active');
 	});
 	
-	$('.banner').flexslider({
-		animation: "fade"
-	});
-
-	
-	
 })
 
 

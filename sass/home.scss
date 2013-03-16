@@ -152,10 +152,12 @@
 }
 
 
-.home .banner {
-position: static;
-		
-	img {
+.banner {
+	position: static;
+	background: rgb(50,50,50);	
+	padding-bottom: 0;
+	img, video {
+		height: auto;
 		width: 100%;
 	}
 	figcaption {
