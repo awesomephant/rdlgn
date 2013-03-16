@@ -4,18 +4,14 @@ $('document').ready(function(){
 	})
 	
 	
-	$('.nav-main nav > div > ul > li').click(function(e){
+	$('.nav-main li a').click(function(){
 		//e.preventDefault();
-		//$('header nav li').removeClass('active');
-		if ( $(this).hasClass('active') ){
-			$(this).removeClass('active');
+		if( $(this).hasClass('active') ){
+			$(this).removeClass('active');		
 		}
 		else {
-			$('header nav li').removeClass('active');
-			$(this).addClass('active');
+			$(this).addClass('active');			
 		}
-		
-		
 	})
 	
 	$('.nav-main li:has(ul) > a').addClass('hasChild');
