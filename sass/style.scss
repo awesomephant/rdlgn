@@ -197,8 +197,7 @@ footer {
 	font-size:0.7em;
 	font-weight: normal;
 	padding: 1em;
-	body > & {
-		background: darken($lightgray, 4);
+	.page-container > & {
 		border-top: 1px solid darken($lightgray, 6);
 	}
 	
@@ -266,6 +265,10 @@ footer {
 	color: gray;
 	border-bottom: 0.6em solid $yellow;
 	padding: 1em;
+	background-image: url('images/logo_clean.svg');
+	background-position: right 1em center;
+	background-size: auto 60%;
+	background-repeat: no-repeat;
 }
 
 body:not(.home){
