@@ -6,18 +6,14 @@ $('document').ready(function(){
 	
 	$('.nav-main li a').click(function(){
 		//e.preventDefault();
-		if( $(this).hasClass('active') ){
-			$(this).removeClass('active');		
-		}
-		else {
-			$(this).addClass('active');			
-		}
+		$(this).toggleClass('active');
 	})
 	
 	$('.nav-main li:has(ul) > a').addClass('hasChild');
 	
 	$('.nav-close').click(function(){
 		$('body').removeClass('nav-active');
+		$('.nav-main li a').removeClass('active');
 	});
 	
 	//$('header nav').hide();

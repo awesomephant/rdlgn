@@ -3,9 +3,7 @@
 	padding-top: 0;
 	font-size: 0.8em;
 }
-.entry-content {
-	@extend .clearfix;
-}
+
 .home article p {
 	padding: 1em;
 }
@@ -24,8 +22,7 @@ footer.entry-meta {
 	}
 }
 
-article {
-
+article{
 	p{
 		line-height: 1.7em;
 		padding-right: 1em;
@@ -200,6 +197,8 @@ article {
 		padding-left: 10%;
 		width: 60%;
 		float: left;
+		border-right: 1px solid darken($lightgray, 5);
+
 	}
 
 	padding-right: 2.5%;
@@ -210,6 +209,5 @@ article {
 		width: 35%;
 		padding-left: 2.5%;
 		display: inline-block;
-		border-left: 1px solid darken($lightgray, 5);
 	}
 }

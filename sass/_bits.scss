@@ -44,6 +44,7 @@ $pdf : rgb(248,58,48);
 
 @mixin box($color){
 	display: inline-block;
+	cursor: pointer;
 	background-color: $color;
 	padding: .7em;
 	color: white;

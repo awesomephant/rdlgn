@@ -4,20 +4,10 @@ Template Name: Startseite
 */
 ?><?php get_header(); ?>
 		<section class='banner'>
-  	    <ul class='slides'>
-		<li>
-			<figure>
+  	    	<figure>
 				<img src="<?php bloginfo('template_directory'); ?>/images/people-even-wider.jpg" />
 				<figcaption><?php the_field('tagline')?></figcaption>
 			</figure>
-		</li>
-		<li>
-			<figure>
-				<img src="<?php bloginfo('template_directory'); ?>/images/people-even-wider.jpg" />
-				<figcaption><?php the_field('tagline')?></figcaption>
-			</figure>
-		</li>
-		</ul>
 		</section>
         <section class="intro">
 				<?php while ( have_posts() ) : the_post(); ?>

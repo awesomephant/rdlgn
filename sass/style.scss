@@ -36,29 +36,9 @@ html{
     background: rgb(254,254,254);
  }
 
-body > [role="main"]{
+.page-container > [role="main"]{
 	@extend .clearfix;
-    
-	figure {
-		position: relative;
-	}
-	figcaption {
-		position: absolute;
-		bottom: 1em;
-		left: 1em;
-		background: white;
-		opacity: 1;
-		padding: 1em;
-		font-weight: 400;
-		color: rgb(70,70,70);
-		
-		h2 {
-			font-weight: 700;
-			margin-bottom: 0.1em;
-			color: black;
-		}
-		
-	}
+ 
 }
 section {
 	padding-bottom: 2em;
@@ -280,8 +260,8 @@ footer {
 
 .copyright {
 	@extend .nicetype;
+	background: $lightgray;
 	border-top: 1px solid lightgray;
-	background: white;
 	font-size: 0.9em;
 	color: gray;
 	border-bottom: 0.6em solid $yellow;
@@ -290,7 +270,7 @@ footer {
 
 body:not(.home){
 	border-top-width: 1em;
-	& > header{
+	.page-container > header{
 		h1 {
 			font-size: 0.7em;
 		}
@@ -334,7 +314,6 @@ body:not(.home){
 .primary {
 		@include breakpoint(m){
 		width: 75%;
-		float: left;
 	}
 }
 

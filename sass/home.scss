@@ -1,3 +1,4 @@
+
 .home {
 .blog h2 {
 
@@ -105,6 +106,8 @@
 	float: left;
 	display: inline-block;
 	padding-right: 1em;
+	@extend .clearfix;
+	
 	margin-top: 2em;
 	padding-bottom: 2em;
 	@include breakpoint(l){
@@ -116,13 +119,8 @@
 	}
 	@include breakpoint(l){
 		width: 33%;
-		border-right: 1px solid lightgray;
 	}
 	
-	&.last {
-		border-right: none;
-	}
-
 	h2 {
 		font-size: 1.7em;
 		font-weight: 100;
@@ -151,14 +149,16 @@
 	}
 }
 
-
 .banner {
 	position: static;
-	background: rgb(50,50,50);	
 	padding-bottom: 0;
+	margin-bottom: 1em;
 	img, video {
 		height: auto;
 		width: 100%;
+	}
+	figure {
+		position: relative;
 	}
 	figcaption {
 		position: static;
@@ -180,7 +180,7 @@
 		font-weight: 400;
 		padding: .5em;
 		font-size: 1.2em;
-		border-bottom: 1px solid $lightgray;
+		border-bottom: 5px solid $lightgray;
 		display: block;
 		
 	}
