@@ -238,6 +238,8 @@ li.comment {
 .home article p {
   padding: 1em; }
 
+body:not(.home) .page-container > header {
+  border-bottom: 1px solid #eeeeee; }
 body:not(.home) footer.entry-meta {
   width: 100%;
   color: lightgray;
@@ -369,6 +371,8 @@ body:not(.home) article header {
     box-shadow: 0 0 0 0.3em rgba(255, 255, 255, 0.5) inset; }
 
 .primary {
+  display: inline-block;
+  padding-top: 1em;
   padding-left: 6.25%;
   padding-right: 6.25%; }
 

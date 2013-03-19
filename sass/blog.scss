@@ -8,7 +8,9 @@
 	padding: 1em;
 }
 body:not(.home) {
-
+.page-container > header {
+	border-bottom: 1px solid darken($lightgray, 5);
+}
 footer.entry-meta {
 	width: 100%;
 	color: lightgray;
@@ -175,6 +177,8 @@ article{
 	}
 }
 .primary {
+	display: inline-block;
+	padding-top: 1em;
 	padding-left: 12.5 / 2 * 1%;
 	padding-right: 12.5 / 2 * 1%;
 }
