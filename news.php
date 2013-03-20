@@ -1,35 +1,20 @@
 <?php
-/**
- * The main template file.
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
- * @package grid
- * @since grid 1.0
- */
+/*
+Template Name: News
+*/
 
 get_header(); ?>
 
 		<div class="primary news" class="content-area">
-			<?php if ( have_posts() ) : ?>
+			Aktuelles
 			
-			<?php query_posts( 'cat=16' );?>
+			<?php if ( have_posts() ) : 
+				query_posts('post_type=events');
 			
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+				while ( have_posts() ) : the_post(); ?>
 
-					<?php
-						/* Include the Post-Format-specific template for the content.
-						 * If you want to overload this in a child theme then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'content', get_post_format() );
-					?>
-
+						<?php get_template_part( 'content', get_post_format() );?>
+				
 				<?php endwhile; ?>
 
 				<?php // grid_content_nav( 'nav-below' ); ?>
@@ -41,10 +26,5 @@ get_header(); ?>
 			<?php endif; ?>
 
 		</div><!-- #primary .content-area -->
-	    <div class="secondary">
-		<?php if ( ! dynamic_sidebar() ) : ?>
-            <li>{static sidebar item 1}</li>
-            <li>{static sidebar item 2}</li>
-        <?php endif; ?>
-		</div>
+
 <?php get_footer(); ?>
