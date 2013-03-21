@@ -10,7 +10,7 @@
 				</p>
 				<h2><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'grid' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 				
-				<?php the_excerpt( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'grid' ) ); ?>
+				<?php the_excerpt( __( 'Weiterlesen <span class="meta-nav">&rarr;</span>', 'grid' ) ); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'grid' ), 'after' => '</div>' ) ); ?>
 			</article>	
 

@@ -1,0 +1,8 @@
+[class*=team-]{
+}
+
+.employee {
+	@include box($lightgray);
+	color: gray;
+	margin: .2em;
+}
