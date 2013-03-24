@@ -149,3 +149,36 @@ aside nav {
 		margin-top: 0.5em;
 	}
 }
+
+footer {
+	
+	nav {
+		font-size: 1.3em;
+		@include breakpoint(s){
+			font-size: 1.2em;
+		}
+		@include breakpoint(m){
+			font-size: 1.12em;
+		}
+	}
+	@include breakpoint(s){ @include cols(2);}
+	@include breakpoint(m){	@include cols(3);}
+	@include breakpoint(l){ @include cols(4);}
+	.menu > ul > li > a {
+		color: rgb(50,50,50);
+		text-align: center;
+		font-weight: 600;
+		@include breakpoint(s){text-align: left;}
+		margin-top: 1em;
+	}
+	a{
+		text-decoration: none;
+		color: $accent;
+		padding: .7em;
+		display: block; 
+		&:hover, &:focus {
+			text-decoration: underline;
+			background: $lightgray;
+		}
+	}
+}

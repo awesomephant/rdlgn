@@ -67,8 +67,6 @@ function grid_setup() {
 		'primary' => __( 'Primary Menu', 'grid' ),
 		'secondary' => __( 'Secondary Menu Menu', 'grid' ),
 	) );
-
-
 }
 endif; // grid_setup
 add_action( 'after_setup_theme', 'grid_setup' );

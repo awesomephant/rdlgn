@@ -11,8 +11,8 @@
 
 	</div><!-- #main .site-main -->
 
-			<footer>
-			<nav>
+		<footer>
+			<nav role="navigation">
 				<?php wp_nav_menu( array( 'theme_location' => 'secondary' ) ); ?>
 			</nav>
 			<div class='partners'>

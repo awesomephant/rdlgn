@@ -2,7 +2,28 @@
 }
 
 .employee {
-	@include box($lightgray);
+	@include box($lightgray, 0);
+	
 	color: gray;
 	margin: .2em;
+	
+	.avatar {
+		width: 5em;
+		height: 5em;
+		display: inline-block;
+		float: left;
+		margin-right: .8em;
+	}
+	
+	.data {
+		padding: .8em;
+	}
+	
+	span{
+		font-size: .8em;
+	}
+	h2 {
+		color: black;
+		margin-bottom: .2em;
+	}
 }

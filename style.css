@@ -28,22 +28,21 @@ License: All rights reserved
   font-family: 'entypo';
   font-size: 2em; }
 
-.clearfix:before, .comments form:before, .commentlist .reply a:before, .teaser:before, .page-container > [role="main"]:before, footer ul:before, section:before,
+.clearfix:before, .comments form:before, .commentlist .reply a:before, .teaser:before, .page-container > [role="main"]:before, section:before,
 .clearfix:after,
 .comments form:after,
 .commentlist .reply a:after,
 .teaser:after,
 .page-container > [role="main"]:after,
-footer ul:after,
 section:after {
   content: "";
   display: table;
   clear: both; }
 
-.clearfix:after, .comments form:after, .commentlist .reply a:after, .teaser:after, .page-container > [role="main"]:after, footer ul:after, section:after {
+.clearfix:after, .comments form:after, .commentlist .reply a:after, .teaser:after, .page-container > [role="main"]:after, section:after {
   clear: both; }
 
-.clearfix, .comments form, .commentlist .reply a, .teaser, .page-container > [role="main"], footer ul, section {
+.clearfix, .comments form, .commentlist .reply a, .teaser, .page-container > [role="main"], section {
   zoom: 1;
   /* For IE 6/7 (trigger hasLayout) */ }
 
@@ -136,7 +135,7 @@ table {
   display: inline-block;
   cursor: pointer;
   background-color: #82a0ff;
-  padding: .7em;
+  padding: 0.7em;
   color: white;
   border: none;
   font-size: .9em;
@@ -356,7 +355,7 @@ body:not(.home) article header {
   display: inline-block;
   cursor: pointer;
   background-color: #82a0ff;
-  padding: .7em;
+  padding: 0.7em;
   color: white;
   border: none;
   -moz-transition: 0.3s all;
@@ -419,7 +418,7 @@ body:not(.home) article header {
     display: inline-block;
     cursor: pointer;
     background-color: #82a0ff;
-    padding: .7em;
+    padding: 0.7em;
     color: white;
     border: none;
     padding: .5em;
@@ -507,7 +506,7 @@ body:not(.home) article header {
     display: inline-block;
     cursor: pointer;
     background-color: #82a0ff;
-    padding: .7em;
+    padding: 0.7em;
     color: white;
     border: none;
     padding-right: 1.5em; }
@@ -585,7 +584,7 @@ body:not(.home) article header {
   display: inline-block;
   cursor: pointer;
   background-color: #82a0ff;
-  padding: .7em;
+  padding: 0.7em;
   color: white;
   border: none;
   text-align: left;
@@ -718,17 +717,76 @@ aside nav {
       aside nav a {
         width: 90%; } }
 
+footer nav {
+  font-size: 1.3em; }
+  @media (min-width: 30em) {
+    footer nav {
+      font-size: 1.2em; } }
+  @media (min-width: 40em) {
+    footer nav {
+      font-size: 1.12em; } }
+@media (min-width: 30em) {
+  footer {
+    -moz-column-count: 2;
+    -o-column-count: 2;
+    -webkit-column-count: 2;
+    -ms-column-count: 2;
+    -ms-column-count: 2; } }
+@media (min-width: 40em) {
+  footer {
+    -moz-column-count: 3;
+    -o-column-count: 3;
+    -webkit-column-count: 3;
+    -ms-column-count: 3;
+    -ms-column-count: 3; } }
+@media (min-width: 50em) {
+  footer {
+    -moz-column-count: 4;
+    -o-column-count: 4;
+    -webkit-column-count: 4;
+    -ms-column-count: 4;
+    -ms-column-count: 4; } }
+footer .menu > ul > li > a {
+  color: #323232;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 1em; }
+  @media (min-width: 30em) {
+    footer .menu > ul > li > a {
+      text-align: left; } }
+footer a {
+  text-decoration: none;
+  color: #82a0ff;
+  padding: .7em;
+  display: block; }
+  footer a:hover, footer a:focus {
+    text-decoration: underline;
+    background: #fbfbfb; }
+
 .employee {
   display: inline-block;
   cursor: pointer;
   background-color: #fbfbfb;
-  padding: .7em;
+  padding: 0;
   color: white;
   border: none;
   color: gray;
   margin: .2em; }
   .employee:hover, .employee:focus {
     background-color: #eeeeee; }
+  .employee .avatar {
+    width: 5em;
+    height: 5em;
+    display: inline-block;
+    float: left;
+    margin-right: .8em; }
+  .employee .data {
+    padding: .8em; }
+  .employee span {
+    font-size: .8em; }
+  .employee h2 {
+    color: black;
+    margin-bottom: .2em; }
 
 ::-moz-selection {
   background: #82a0ff;
@@ -1013,41 +1071,6 @@ footer {
   padding: 1em; }
   .page-container > footer {
     border-top: 1px solid #ececec; }
-  @media (min-width: 40em) {
-    footer ul li {
-      width: 48%;
-      margin: 1%;
-      float: left; } }
-  @media (min-width: 50em) {
-    footer ul li {
-      width: 23%;
-      margin-right: 1%;
-      float: left; } }
-  footer ul li a {
-    text-decoration: none;
-    color: #323232;
-    font-weight: 900;
-    font-size: 1.25em;
-    padding: 0.5em;
-    display: block; }
-    footer ul li a:hover, footer ul li a:focus {
-      color: black; }
-  footer ul li ul li {
-    display: block;
-    width: 100%;
-    float: none;
-    margin: 0; }
-    footer ul li ul li a {
-      background: transparent;
-      border-bottom: 0;
-      color: #82a0ff;
-      font-weight: normal; }
-      footer ul li ul li a:hover, footer ul li ul li a:focus {
-        color: #688dff;
-        text-decoration: underline; }
-  footer .children .children {
-    opacity: .6;
-    margin-bottom: 1em; }
 
 .copyright {
   background: #fbfbfb;
@@ -1099,7 +1122,7 @@ body:not(.home) {
   display: inline-block;
   cursor: pointer;
   background-color: lightgrey;
-  padding: .7em;
+  padding: 0.7em;
   color: white;
   border: none; }
   .comment-meta a:hover, .comment-meta a:focus, .edit-link a:hover, .edit-link a:focus {
@@ -1126,7 +1149,7 @@ body:not(.home) {
   display: inline-block;
   cursor: pointer;
   background-color: #82a0ff;
-  padding: .7em;
+  padding: 0.7em;
   color: white;
   border: none;
   cursor: pointer; }
