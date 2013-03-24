@@ -725,6 +725,8 @@ footer nav {
   @media (min-width: 40em) {
     footer nav {
       font-size: 1.12em; } }
+  footer nav .sub-menu {
+    display: block; }
 @media (min-width: 30em) {
   footer {
     -moz-column-count: 2;

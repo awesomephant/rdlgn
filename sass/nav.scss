@@ -160,6 +160,10 @@ footer {
 		@include breakpoint(m){
 			font-size: 1.12em;
 		}
+		
+		.sub-menu {
+			display: block;
+		}
 	}
 	@include breakpoint(s){ @include cols(2);}
 	@include breakpoint(m){	@include cols(3);}
