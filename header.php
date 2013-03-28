@@ -1,10 +1,10 @@
-<!doctype html>
+﻿<!doctype html>
 
 <html <?php language_attributes();?>>
 	<head>
 		<meta charset="utf8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width">
 		<title><?php
 	/*
 	 * Print the <title> tag based on what is being viewed.
@@ -36,12 +36,15 @@
 
 <body <?php body_class(); ?>>
 <div class='nav-main'>
+	<div class='controls' role='toolbar'>
+		<button class='nav-back'>zurück</button>
+		<button class='nav-close'>schließen</button>
+	</div>
 	<nav role="navigation" class="site-navigation main-navigation clearfix">	
 				
 		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 				
 	</nav>
-	<button class='nav-close'>&times;</button>
 </div>
 	<div class='page-container'>	
 		<header>
@@ -49,7 +52,7 @@
                 <h1><a href=" <?php echo home_url(); ?> "><?php bloginfo( 'name' ); ?></a></h1>
                 <h2><?php bloginfo( 'description' ); ?></h2>
             </hgroup>
-			<button class='toggleNav'>Navigation</button>
+			<button role='button' class='toggleNav'>Navigation</button>
 		</header>
 	
 		<div role ="main">

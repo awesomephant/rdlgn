@@ -30,10 +30,16 @@
 .nav-main{  
 	position: absolute;
 	overflow: visible;
-	left: -25%;
+	left: -100%;
 	z-index: 20;
 	height: 100%;
-	width: 25%;
+	width: 95%;
+	@include breakpoint(s){
+		width: 50%;
+	}
+	@include breakpoint(m){
+		width: 25%;
+	}
 	background: white;
 	border-right: 1px solid $lightgray;
 	box-shadow: 14px 0px 25px -32px rgba(black, .7);
@@ -49,7 +55,6 @@
 		color: rgb(50,50,50);
 		border-bottom: 1px solid $lightgray;
 		font-size: .9em;
-		@include transition(.3s);
 		&:hover, &:focus {
 			background: $lightgray;
 		}
@@ -60,13 +65,12 @@
 	}
 }
 .menu {}
-.sub-menu {
-	display: none;
-	@include transition(.5s);
-		
-	.active + &{
+.main-navigation .active + .sub-menu{
 		display: block;
 	}
+	
+.main-navigation .sub-menu {
+	display: none;		
 	position: absolute;
 	height: 100%;
 	left: 100%;
@@ -75,7 +79,6 @@
 	border-left: 1px solid darken($lightgray, 5);
 	top: 0;
 	z-index: -10;
-	@include transition(.3s);
 		
 	a {
 		border-bottom: 1px solid darken($lightgray, 5);
@@ -93,6 +96,51 @@
 	-moz-transform: translateX(120px);
 	-webkit-transform: translateX(120px);
 
+}
+.nav-main {
+	.controls {
+		padding-left: .5em;
+		padding-right: .5em;
+		padding-bottom: .5em;
+		border-bottom: 1px solid $lightgray;
+	}
+	button{
+		&:after {
+			@extend .iconfont;
+			position: absolute;
+			top: -.4em;
+			left: 38%;
+			font-size: 2.5em;
+			text-indent: 0;
+			color: darken($lightgray, 30);
+		}
+		position: relative;
+		padding: 0;
+		background: $lightgray;
+		border: 1px solid darken($lightgray, 5);
+		text-indent: -9999px;
+		height: 2.5em;
+		width: 3.5em;
+		display: inline-block;
+		vertical-align: center;
+		cursor: pointer;
+		&:hover, &:focus {
+			background: darken($lightgray, 2);
+			border: 1px solid darken($lightgray, 10);
+			color: darken($lightgray, 40);
+		}
+
+	}
+	
+	.nav-close{
+		float: right;
+		&:after {
+			content: '\274C';
+		}
+	}
+	.nav-back:after {
+		content: '\21B0';
+	}
 }
 aside nav {
 	list-style:none;
