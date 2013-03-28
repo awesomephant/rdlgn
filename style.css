@@ -725,26 +725,16 @@ body:not(.home) article header {
       -ms-transform: translateX(-200%);
       transform: translateX(-200%); } }
 
-aside nav {
-  list-style: none; }
-  aside nav .current_page_parent .children, aside nav .current_page_ancestor .children {
-    display: block; }
-    aside nav .current_page_parent .children .children, aside nav .current_page_ancestor .children .children {
-      display: none; }
-  aside nav .current_page_item > a {
-    color: white;
-    background: #82a0ff; }
-    aside nav .current_page_item > a:hover, aside nav .current_page_item > a:focus {
-      color: white;
-      background: #688dff; }
-  aside nav .current_page_item > .children {
-    display: block !important; }
-  aside nav .children {
-    margin-left: 1em;
-    display: none; }
-    aside nav .children .children {
-      margin-left: 1em; }
-  aside nav a {
+.toc nav {
+  list-style: none;
+  background: #fbfbfb;
+  display: inline-block;
+  padding: 1em; }
+  @media (min-width: 30em) {
+    .toc nav {
+      float: right;
+      margin-right: 1em; } }
+  .toc nav a {
     background: #fbfbfb;
     margin: 0;
     font-size: 0.9em;
@@ -752,13 +742,20 @@ aside nav {
     text-decoration: none;
     display: block;
     float: none;
-    padding: 1em;
+    padding: .5em;
     margin-top: 0.5em; }
-    aside nav a:hover, aside nav a:focus {
+    .toc nav a:hover, .toc nav a:focus {
       color: #323232; }
-    @media (min-width: 50em) {
-      aside nav a {
-        width: 90%; } }
+
+h3:target {
+  animation: highlight 1s ease; }
+
+@keyframes highlight {
+  from {
+    background: #fff9a6; }
+
+  to {
+    background: white; } }
 
 footer nav {
   font-size: 1.3em; }

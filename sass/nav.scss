@@ -156,41 +156,15 @@
  
 
 
-aside nav {
+.toc nav {
 	list-style:none;
-	
-	.current_page_parent, .current_page_ancestor {
-		.children {
-			display: block;
-			.children {
-				display: none;
-			}
+	background: $lightgray;
+	display: inline-block;
+	padding: 1em;
+	@include breakpoint(s){
+		float: right;
+		margin-right: 1em;
 		}
-	}
-	.current_page_item {
-		& > a {
-			color: white;
-			background: $accent;
-			
-			&:hover, &:focus {
-				color: white;
-				background: darken($accent, 5);
-			}
-		}
-		& > .children {
-			display: block !important;
-		}
-	}
-		
-	.children {
-		margin-left: 1em;
-		display: none;
-		 .children {
-			margin-left: 1em;
-		}
-	}
-		
-	
 	
 	a {
 		background: $lightgray;
@@ -201,15 +175,19 @@ aside nav {
 			color: rgb(50,50,50);
 		}
 		text-decoration: none;
-		
-		@include breakpoint(l){
-			width: 90%;
-			}
 		display: block;
 		float: none;
-		padding: 1em;
+		padding: .5em;
 		margin-top: 0.5em;
 	}
+}
+h3:target {
+	animation: highlight 1s ease;
+}
+
+@keyframes highlight {
+from { background: $yellow; }
+to { background: white; }
 }
 
 footer {

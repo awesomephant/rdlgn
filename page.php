@@ -12,9 +12,9 @@
  */
 
 get_header(); ?>
-<?php get_sidebar(); ?>
-
+			<?php get_sidebar(); ?>
 			<div id="content" class="site-content" role="main">
+
 				<?php if ( has_post_thumbnail() ) {
 					the_post_thumbnail();
 				} ?>
