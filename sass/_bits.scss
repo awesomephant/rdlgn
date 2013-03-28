@@ -34,11 +34,14 @@ $pdf : rgb(248,58,48);
   @if $point == l {
     @media (min-width: 50em) { @content; }
   }
-  @else if $point == m {
+  @if $point == m {
     @media (min-width: 40em) { @content; }
   }
-  @else if $point == s {
+  @if $point == s {
     @media (min-width: 30em) { @content; }
+  }
+  @else if $point == sr {
+    @media (max-width: 30em) { @content; }
   }
 }
 
@@ -79,7 +82,7 @@ $pdf : rgb(248,58,48);
 	-ms-transform: translateY(-0.1em);
 	transform: translateY(-0.1em);
 }
-@mixin transition($duration, $property: all){
+@mixin transition($duration: .3s, $property: all){
 	-moz-transition: $duration $property;
 	-o-transition: $duration $property;
 	-webkit-transition: $duration $property;
@@ -128,6 +131,12 @@ $formats:
   (pptx rgb(240, 220, 10))
 ;
 
+@mixin moveX($x){
+	//Firefox unprefixed since v 16.00
+	-webkit-transform: translateX($x);
+	-ms-transform: translateX($x); //IE9
+	transform: translateX($x);
+}
 
 .clearfix:before,
 .clearfix:after {

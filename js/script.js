@@ -33,6 +33,7 @@ $('document').ready(function(){
 	$('.nav-main li:has(ul) > a').addClass('hasChild');
 	
 	$('.nav-back').click(function(){
+		$('.active').removeClass('active');
 		navLvl -= 1;
 		addNavClass();
 	});
@@ -41,6 +42,13 @@ $('document').ready(function(){
 		$('body').removeClass('nav-active');
 		$('.nav-main li a').removeClass('active');
 	});
+	
+	$('.nav-active .page-container').click(function(){
+		//window.alert('Hello World.');
+		//$('body').removeClass('nav-active');
+		//$('.nav-main li a').removeClass('active');
+	});
+	
 	
 	//$('header nav').hide();
 	$('.toggleNav').click(function(){

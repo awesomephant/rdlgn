@@ -8,7 +8,7 @@
 			content: '\2630';
 			position: absolute;
 			font-size: 5em;
-			top: -.6em;
+			top: -.5em;
 			right: .2em;
 			
 		}
@@ -31,6 +31,7 @@
 	position: absolute;
 	overflow: visible;
 	left: -100%;
+	top: 17px;
 	z-index: 20;
 	height: 100%;
 	width: 95%;
@@ -43,7 +44,7 @@
 	background: white;
 	border-right: 1px solid $lightgray;
 	box-shadow: 14px 0px 25px -32px rgba(black, .7);
-	@include transition(.5s);
+	@include transition();
 	
 	.nav-active &{
 		left: 0;
@@ -75,6 +76,7 @@
 	height: 100%;
 	left: 100%;
 	width: 100%;
+	box-shadow: 14px 0px 25px -32px rgba(black, .7);
 	background: $lightgray;
 	border-left: 1px solid darken($lightgray, 5);
 	top: 0;
@@ -93,16 +95,15 @@
 	@include transition(.5s);
 }
 .nav-active .page-container {
-	-moz-transform: translateX(120px);
-	-webkit-transform: translateX(120px);
-
+	//@include moveX(120px);
+	
 }
 .nav-main {
 	.controls {
-		padding-left: .5em;
-		padding-right: .5em;
-		padding-bottom: .5em;
+		padding: .5em;
 		border-bottom: 1px solid $lightgray;
+		@extend .clearfix;
+		background: $lightgray;
 	}
 	button{
 		&:after {
@@ -116,7 +117,7 @@
 		}
 		position: relative;
 		padding: 0;
-		background: $lightgray;
+		background: lighten($lightgray, 5);
 		border: 1px solid darken($lightgray, 5);
 		text-indent: -9999px;
 		height: 2.5em;
@@ -138,10 +139,23 @@
 			content: '\274C';
 		}
 	}
-	.nav-back:after {
-		content: '\21B0';
+	.nav-back{
+		@include breakpoint(m){display: none;}
+		&:after {
+			content: '\21B0';
+		}
 	}
 }
+.main-navigation{
+	@include transition();
+	@include breakpoint(sr){
+		.nav-lvl-1 &{@include moveX(-100%);}
+		.nav-lvl-2 &{@include moveX(-200%);}
+	}
+}
+ 
+
+
 aside nav {
 	list-style:none;
 	
