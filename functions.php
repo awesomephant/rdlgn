@@ -112,3 +112,9 @@ function new_excerpt_more($more) {
 	return ' <a class="read-more" href="'. get_permalink($post->ID) . '">alles lesen</a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+
+
+if(function_exists('register_field')) {
+     register_field('acf_time_picker', dirname(__File__) . '/acf_time_picker/acf_time_picker.php');
+   }

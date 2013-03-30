@@ -16,25 +16,21 @@ Template Name: Startseite
 
 				<?php endwhile; // end of the loop. ?>
 			<div class='teaser'>
-				<h2>Patienteninformation</h2>
-				<p>
-					Unser Ziel ist es, mit einer breit gefächerten Bildgebung und differenzierten Methoden der Strahlenheilkunde Ihnen die bestmögliche Behandlung zu bieten.
-				</p>
-				<p>
-					Wir möchten Sie einladen, sich auf den folgenden Seiten über unser Leistungsspektrum umfassend zu informieren.
-				</p>
-				<a href='#'>Weiterlesen</a>
+				<h2><?php the_field('teaser-0-heading')?></h2>
+					<?php the_field('teaser-0')?>
+					<a href='#'>Weiterlesen</a>
 			</div>
 			<div class='teaser'>
-				<h2>Ärtzteinformation</h2>
-				<p>Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
-				<a href='#'>Weiterlesen</a>
+				<h2><?php the_field('teaser-1-heading')?></h2>
+					<?php the_field('teaser-1')?>
+					<a href='#'>Weiterlesen</a>
 			</div>
 			<div class='teaser last'>
-				<h2>Leistungsübersicht</h2>
-				<p>Lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet</p>
-				<a href='#'>Weiterlesen</a>
+				<h2><?php the_field('teaser-2-heading')?></h2>
+					<?php the_field('teaser-2')?>
+					<a href='#'>Weiterlesen</a>
 			</div>
+			
 		</section>
 		<section class='feeds'>
 			<section class="news">

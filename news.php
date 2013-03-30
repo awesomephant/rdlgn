@@ -4,16 +4,15 @@ Template Name: News
 */
 
 get_header(); ?>
-
 		<div class="primary news" class="content-area">
-			Aktuelles
+			<h1>Aktuelles</h1>
 			
 			<?php if ( have_posts() ) : 
 				query_posts('post_type=events');
 			
 				while ( have_posts() ) : the_post(); ?>
 
-						<?php get_template_part( 'content', get_post_format() );?>
+						<?php get_template_part( 'content', events );?>
 				
 				<?php endwhile; ?>
 

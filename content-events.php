@@ -6,8 +6,7 @@
 ?>
 			<article>
 				<p class="meta">
-					<?php grid_posted_on(); ?>
-					|
+					<em class='date'><?php the_field('date')?> <time class='begin'><?php the_field('time_start')?></time><time class='end'><?php the_field('time_end')?></time></em>
 					<?php 
 						$category = get_the_category(); 
 						if($category[0]){
