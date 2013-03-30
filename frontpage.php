@@ -41,7 +41,7 @@ Template Name: Startseite
 			<a href="#"><h1>Aktuelles.</h1></a>
 			<ul>
 					<?php
-					$news = new WP_Query( 'category_name=aktuelles' );
+					$news = new WP_Query( 'post_type=events' );
 					// The Loop
 					while ( $news->have_posts() ) :
 						$news->the_post();
@@ -50,7 +50,7 @@ Template Name: Startseite
 					<li>
 						<a href="<?php the_permalink();?>">
 							<h2><?php the_title();?></h2>
-							<span class="meta"><?php grid_posted_on(); ?> <span class='comment-count'><?php comments_number();?>.</span></span>
+							<span class="meta"><?php grid_posted_on(); ?></span>
 						</a>
 					</li>
 					
@@ -61,13 +61,13 @@ Template Name: Startseite
                 <a href=""><h1>Blog "100 Nanometer".</h1></a>
 				<ul>
 				<?php
-				$recent = new WP_Query( 'cat=-16');
+				$recent = new WP_Query( 'post_type=post');
 				if($recent->have_posts()) : while($recent->have_posts()): $recent->the_post();
 				?>
 				<li>
                     <a href="<?php the_permalink();?>">
 						<h2><?php the_title();?></h2>
-                        <span class="meta"><?php grid_posted_on(); ?><span class='comment-count'><?php comments_number();?>.</span></span>
+                        <span class="meta"><?php grid_posted_on(); ?></span>
 					</a>
 				</li>
 				<?php endwhile ?>

@@ -2,7 +2,13 @@
 		@include box($accent);
 		text-align: left;
 		padding-right: 4em;
-		position: relative;
+		position: fixed;
+		top: 0;
+		left: 0;
+		@include breakpoint(s){
+			position: relative;
+
+		}
 		&:after {
 			@extend .iconfont;
 			content: '\2630';
@@ -31,7 +37,10 @@
 	position: absolute;
 	overflow: visible;
 	left: -100%;
-	top: 17px;
+	top: 0;
+	@include breakpoint(s){
+		top: 24px;
+	}
 	z-index: 20;
 	height: 100%;
 	width: 95%;

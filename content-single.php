@@ -7,16 +7,29 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
-
-		<div class="entry-meta">
-			<?php grid_posted_on(); ?>
-		</div><!-- .entry-meta -->
+		<p class='meta'>
+		<span class='posted-on'><?php grid_posted_on(); ?></span>
+		
+		<?php 
+		$category = get_the_category(); 
+			if($category[0]){
+			echo '<a class="cat" href="'.get_category_link($category[0]->term_id ).'">'.$category[0]->cat_name.'</a>';
+			}
+		?>
+		</p>
+		<hgroup>
+	
+			<h1 class="entry-title"><?php the_title(); ?></h1>
+			<h2><?php the_field('subhead'); ?></h2>
+		
+		</hgroup>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
+		<p class='author'>
+			<a href='<?php the_author_link(); ?>'><?php the_author(); ?></a>
+		</p>
 		<?php the_content(); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'grid' ), 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta">

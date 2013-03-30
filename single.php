@@ -23,7 +23,8 @@ get_header(); ?>
 		</div><!-- #primary .content-area -->
 		<section class='secondary'>	
 		<section class='comments'>
-			<h2>Kommentare</h2>
+			<h2><?php comments_number( '', '1 Kommentar', '% Kommentare' ); ?>.
+			</h2>
 			<?php
 					// If comments are open or we have at least one comment, load up the comment template
 					if ( comments_open() || '0' != get_comments_number() )

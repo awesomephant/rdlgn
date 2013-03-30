@@ -7,24 +7,12 @@
 .home article p {
 	padding: 1em;
 }
-body:not(.home) {
+
 .page-container > header {
 	border-bottom: 1px solid darken($lightgray, 5);
 }
-footer.entry-meta {
-	width: 100%;
-	color: lightgray;
-	padding: 0;
-	&:before {
-		content: '\1F4C1';
-		@extend .iconfont;
-	}
-	a {
-		color: $accent;
-	}
-}
 
-article{
+.blog article{
 	p{
 		line-height: 1.7em;
 		padding-right: 1em;
@@ -40,45 +28,6 @@ article{
 		border-left: .3em solid $accent;
 	}
 		
-	h2 a:link, h2 a:visited {
-		color: rgb(50,50,50);
-		font-size: 1.5em;
-		font-weight: 100;
-		text-decoration: none;
-		line-height: 1.4em;
-		&:hover, &:focus {
-			color: lighten(rgb(50,50,50), 5);
-		}
-	}
-		
-	header {
-		border: none;
-		padding-bottom: 1em;
-		width: 100%;
-		
-		.entry-meta {
-			color: gray;
-			border-bottom: 5px solid $lightgray;
-			font-size: 0.4em;
-			padding-top: 1em;
-			padding-bottom: 1em;
-			
-			.author {
-				font-weight: 900;
-				text-transform: uppercase;
-				color: black;
-			}
-			a:link, a:visited {
-				color: $accent;
-			}
-		}
-	}
-}
-}
-
-.tags:before {
-	content: '\E70C';
-	@extend .iconfont;
 }
 
 .wp-caption {
@@ -133,30 +82,73 @@ article{
 }
 
 .single-post {
-	.entry-title {
-		line-height: 1.5em;
-		font-family: georgia;
-		padding-top: 1em;
-		@include breakpoint(m){
-			font-size: 1.2em;
+	.author{
+		display: inline;
+		a {
+			color: black;
+			font-size: .8em;
+			&:before {content: '('}
+			&:after {content: ')'}
 		}
-		@include breakpoint(l){
-			font-size: 1.9em;
+	}
+	.entry-header {
+		h1 {
+			line-height: 1.5em;
+			font-family: georgia;
+			@include breakpoint(s){
+				font-size: 1.5em;
+			}
+			@include breakpoint(m){
+				font-size: 1.9em;
+			}
+			@include breakpoint(l){
+				font-size: 3.5em;
+			}
 		}
-		@include breakpoint(xl){
-			font-size: 2.1em;
+		.cat {
+			font-weight: 800;
+			text-transform: uppercase;
+			color: $accent;
+			text-decoration: none;
 		}
+		.posted-on{
+			color: gray;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			padding-right: 1em;
+			}
+		.meta {
+			padding: 0;
+			font-size: .7em;
+		}
+
 	}
 
 }
 .blog {
+	[role='main']{
+		background: $lightgray;
+	}
+	
+	.primary {
+		background: white;
+	}
 	article{
 		border-bottom: 5px solid $lightgray;
 		margin-bottom: 2em;
 		padding-bottom: 2em;
 	}
-	h2{
+	h2 a{
 		font-family: georgia;
+		font-size: 2em;
+		text-decoration: none;
+		color: $accent;
+		line-height: 1.5em;
+		&:hover, &:focus {
+			text-decoration: underline;
+			color: darken($accent, 5);
+		}
+			
 	}
 	
 	.secondary {
@@ -164,6 +156,22 @@ article{
 			width: 25%;
 			float: right;
 		}
+	}
+}
+
+.read-more {
+	color: white;
+	float: none;
+	border: none;
+	background: $accent;
+	color: .9em;
+	border-radius: 5px;
+	padding: .2em .4em;
+	display: inline-block;
+	&:hover, &:focus {
+		color: white;
+		text-decoration: underline;
+		background: darken($accent, 5);
 	}
 }
 //SEARCH FORMS

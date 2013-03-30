@@ -2,11 +2,14 @@
 }
 
 .employee {
-	@include box($lightgray, 0);
-	
+	border: 1px solid darken($lightgray, 5);
 	color: gray;
 	margin: .2em;
-	
+	display: inline-block;
+	border-radius: 5px;
+	&:hover, &:focus {
+		box-shadow: 0 0 0 5px $lightgray;
+	}
 	.avatar {
 		width: 5em;
 		height: 5em;
@@ -23,7 +26,8 @@
 		font-size: .8em;
 	}
 	h2 {
-		color: black;
+		color: rgb(70,70,70);
+		font-weight: 600;
 		margin-bottom: .2em;
 	}
 }

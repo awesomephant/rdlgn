@@ -15,6 +15,7 @@ License: All rights reserved
 @import 'comments';
 @import 'widgets';
 @import 'blog';
+@import 'page';
 @import 'home';
 @import 'nav';
 @import 'staff';
@@ -34,6 +35,9 @@ body {
 }
 html{
     background: rgb(254,254,254);
+	font-size: 100%; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */
  }
 
 .page-container > [role="main"]{
@@ -137,7 +141,7 @@ em {
 strong {
 	font-weight: 800;
 }
-header {
+.page-container > header {
 	@include breakpoint(m){
 		font-size: 1.8em;
 	}
@@ -211,7 +215,9 @@ footer {
 	color: gray;
 	border-bottom: 0.6em solid $yellow;
 	padding: 1em;
-	background-image: url('images/logo_clean.svg');
+	@include breakpoint(m){
+		background-image: url('images/logo_clean.svg');
+		}
 	background-position: right 1em center;
 	background-size: auto 60%;
 	background-repeat: no-repeat;

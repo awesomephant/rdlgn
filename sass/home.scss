@@ -1,18 +1,13 @@
-
 .home {
 .blog h2 {
 
 	font-family: 'Open Sans';
-	font-size: 1.04em;
-	@media(min-width: 30em){
-		font-size: 1.1em;
-	}
+	
 }
 .blog article, .news article {
 	border-bottom: 1px solid lightgray;
 	padding-bottom: 1em;
 	margin-bottom: 2em;
-	
 	&:last-child{
 		border-bottom: 0;
 	}
@@ -33,13 +28,13 @@
 }
 .blog, .news {
 	padding-top: 5em;
-	padding-right: 1em;
 	ul {
 		height: 20em;
 		overflow-y: scroll;
 	}
+	width: 100%;
 	@include breakpoint(m){
-		width: 48%;
+		width: 49%;
 		float: left;
 	}
 	h1 {
