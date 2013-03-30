@@ -115,6 +115,6 @@ add_filter('excerpt_more', 'new_excerpt_more');
 
 
 
-if(function_exists('register_field')) {
-     register_field('acf_time_picker', dirname(__File__) . '/acf_time_picker/acf_time_picker.php');
-   }
+add_action('acf/register_fields', 'date_time_picker_field');
+
+function date_time_picker_field() { include_once('fields/acf-field-date-time-picker/date-time-picker.php'); }
