@@ -5,10 +5,10 @@ Template Name: News
 
 get_header(); ?>
 		<div class="primary news" class="content-area">
-			<h1>Aktuelles</h1>
-			
+			<ol class='eventlist'>
+			<div class='timeline'></div>
 			<?php if ( have_posts() ) : 
-				query_posts('post_type=events');
+				query_posts('post_type=events&&orderby=meta_value&&meta_key=date');
 			
 				while ( have_posts() ) : the_post(); ?>
 
@@ -23,7 +23,7 @@ get_header(); ?>
 				<?php get_template_part( 'no-results', 'index' ); ?>
 
 			<?php endif; ?>
-
+		</ol>
 		</div><!-- #primary .content-area -->
 
 <?php get_footer(); ?>

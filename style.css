@@ -28,22 +28,23 @@ License: All rights reserved
   font-family: 'entypo';
   font-size: 2em; }
 
-.clearfix:before, .comments form:before, .commentlist .reply a:before, .teaser:before, .nav-main .controls:before, .page-container > [role="main"]:before, section:before,
+.clearfix:before, .comments form:before, .commentlist .reply a:before, .teaser:before, .nav-main .controls:before, .eventlist li:before, .page-container > [role="main"]:before, section:before,
 .clearfix:after,
 .comments form:after,
 .commentlist .reply a:after,
 .teaser:after,
 .nav-main .controls:after,
+.eventlist li:after,
 .page-container > [role="main"]:after,
 section:after {
   content: "";
   display: table;
   clear: both; }
 
-.clearfix:after, .comments form:after, .commentlist .reply a:after, .teaser:after, .nav-main .controls:after, .page-container > [role="main"]:after, section:after {
+.clearfix:after, .comments form:after, .commentlist .reply a:after, .teaser:after, .nav-main .controls:after, .eventlist li:after, .page-container > [role="main"]:after, section:after {
   clear: both; }
 
-.clearfix, .comments form, .commentlist .reply a, .teaser, .nav-main .controls, .page-container > [role="main"], section {
+.clearfix, .comments form, .commentlist .reply a, .teaser, .nav-main .controls, .eventlist li, .page-container > [role="main"], section {
   zoom: 1;
   /* For IE 6/7 (trigger hasLayout) */ }
 
@@ -858,6 +859,61 @@ footer a {
     color: #464646;
     font-weight: 600;
     margin-bottom: .2em; }
+
+.eventlist {
+  position: relative; }
+  .eventlist .date {
+    display: block;
+    font-weight: 700;
+    padding-bottom: .2em; }
+  .eventlist .begin, .eventlist .end {
+    opacity: .8; }
+  .eventlist .end:before {
+    content: ' - '; }
+  .eventlist .end:after {
+    content: ' Uhr'; }
+  .eventlist time {
+    display: inline-block;
+    cursor: pointer;
+    background-color: #82a0ff;
+    padding: 0.7em;
+    color: white;
+    border: none;
+    float: left;
+    width: 11em;
+    position: relative; }
+    .eventlist time span {
+      font-size: .9em; }
+    .eventlist time:hover, .eventlist time:focus {
+      background-color: #688dff; }
+    .eventlist time:after {
+      content: '';
+      width: 15px;
+      height: 15px;
+      display: block;
+      position: absolute;
+      border: 3px solid #ececec;
+      border-radius: 20px;
+      left: -moz-calc(12em - (15px + 3px) / 2);
+      top: 1em;
+      background: white; }
+  .eventlist .timeline {
+    height: 98%;
+    width: 3px;
+    background: #ececec;
+    position: absolute;
+    left: 12em; }
+  .eventlist article {
+    float: right;
+    border: 1px solid #f9f9f9;
+    border-radius: 5px;
+    padding: 1em;
+    width: 70%; }
+  .eventlist h2 a {
+    color: #82a0ff;
+    text-decoration: none; }
+    .eventlist h2 a:hover, .eventlist h2 a:focus {
+      text-decoration: underline; }
 
 ::-moz-selection {
   background: #82a0ff;

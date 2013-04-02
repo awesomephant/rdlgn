@@ -1,0 +1,64 @@
+.eventlist {
+	position: relative;
+	.date {
+		display: block;
+		font-weight: 700;
+		padding-bottom: .2em;
+	}
+	.begin, .end{
+		opacity: .8;
+	}
+	.end:before {
+		content: ' - ';
+	}
+	.end:after {
+		content: ' Uhr';
+	}
+	time {
+		span {
+			font-size: .9em;
+		}
+		@include box($accent);
+		float: left;
+		width: 11em;
+		position: relative;
+		
+		&:after {
+			content: '';
+			width: 15px;
+			height: 15px;
+			display: block;
+			position: absolute;
+			border: 3px solid darken($lightgray, 5);
+			border-radius: 20px;
+			left: -moz-calc(12em - (15px + 3px) / 2);
+			top: 1em;
+			background: white;
+		}
+	}
+	.timeline {
+			height: 98%;
+			width: 3px;
+			background: darken($lightgray, 5);
+			position: absolute;
+			left: 12em;
+	}
+	li {
+		@extend .clearfix;
+	}
+	article {
+		float: right;
+		border: 1px solid $lightgray;
+		border-radius: 5px;
+		padding: 1em;
+		width: 70%;
+	}
+	
+	h2 a {
+		color: $accent;
+		text-decoration: none;
+		&:hover, &:focus {
+			text-decoration: underline;
+		}
+	}
+}
