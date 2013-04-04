@@ -267,13 +267,6 @@ body:not(.home){
 		}
 	}
 }
-.primary {
-		@include breakpoint(m){
-		width: 75%;
-	}
-}
-
-
 
 //===========
 //EDIT LINKS=

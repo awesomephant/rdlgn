@@ -132,6 +132,10 @@
 	
 	.primary {
 		background: white;
+		@include breakpoint(s){
+			width: 75%;
+			border-right: 1px solid darken($lightgray, 5);
+		}
 	}
 	article{
 		border-bottom: 5px solid $lightgray;

@@ -109,7 +109,8 @@ add_theme_support( 'post-thumbnails' );
  
 function new_excerpt_more($more) {
        global $post;
-	return ' <a class="read-more" href="'. get_permalink($post->ID) . '">alles lesen</a>';
+	//return ' <a class="read-more" href="'. get_permalink($post->ID) . '">alles lesen</a>';
+	return ' [...] ';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 

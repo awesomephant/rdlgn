@@ -4,7 +4,14 @@ Template Name: News
 */
 
 get_header(); ?>
+<h1
 		<div class="primary news" class="content-area">
+			<?php while ( have_posts() ) : the_post(); ?>
+					
+					<?php get_template_part( 'content', 'page' ); ?>
+
+				<?php endwhile; // end of the loop. ?>
+				
 			<ol class='eventlist'>
 			<div class='timeline'></div>
 			<?php if ( have_posts() ) : 

@@ -333,6 +333,10 @@ li.comment {
   background: #f9f9f9; }
 .blog .primary {
   background: white; }
+  @media (min-width: 30em) {
+    .blog .primary {
+      width: 75%;
+      border-right: 1px solid #ececec; } }
 .blog article {
   border-bottom: 5px solid #f9f9f9;
   margin-bottom: 2em;
@@ -615,6 +619,7 @@ li.comment {
   text-align: left;
   padding-right: 4em;
   position: fixed;
+  z-index: 10;
   top: 0;
   left: 0; }
   .toggleNav:hover, .toggleNav:focus {
@@ -894,21 +899,31 @@ footer a {
       position: absolute;
       border: 3px solid #ececec;
       border-radius: 20px;
-      left: -moz-calc(12em - (15px + 3px) / 2);
+      left: -moz-calc((1em + 9px ) * -1);
       top: 1em;
       background: white; }
+      @media (min-width: 30em) {
+        .eventlist time:after {
+          left: -moz-calc(12em - (15px + 3px) / 2); } }
   .eventlist .timeline {
     height: 98%;
     width: 3px;
     background: #ececec;
     position: absolute;
-    left: 12em; }
+    left: -1em; }
+    @media (min-width: 30em) {
+      .eventlist .timeline {
+        left: 12em; } }
   .eventlist article {
-    float: right;
+    float: left;
+    width: 100%;
     border: 1px solid #f9f9f9;
     border-radius: 5px;
-    padding: 1em;
-    width: 70%; }
+    padding: 1em; }
+    @media (min-width: 30em) {
+      .eventlist article {
+        margin-left: 3em;
+        width: 70%; } }
   .eventlist h2 a {
     color: #82a0ff;
     text-decoration: none; }
@@ -1245,10 +1260,6 @@ body:not(.home) {
     padding: 0.8em; }
     .page-header h1:hover, .page-header h1:focus {
       background: inherit; }
-
-@media (min-width: 40em) {
-  .primary {
-    width: 75%; } }
 
 .comment-meta a, .edit-link a {
   font-size: .9em;
