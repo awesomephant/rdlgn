@@ -1,0 +1,73 @@
+$indicator_width: 50px;
+
+.contactform {
+	
+	.indicator {
+		@extend .iconfont;
+		background: none repeat scroll 0 0 $accent;
+		border-left: 2px solid lighten($accent, 7);
+		color: white;
+		@include transition(.3s);
+		float: left;
+		width: 0;
+		height: 1.4em;
+		overflow: hidden;
+		padding-bottom: 1em;
+		text-align: center;
+
+	}
+	
+	fieldset {
+		width: 100%;
+		@include breakpoint(m){
+			//@include cols(2, 1em);
+		}	
+		div {
+			display: block;
+		}
+	}
+	label {
+		display: block;
+	}
+	input {
+		@include calc(width, '100% - 50px');	
+	}
+	textarea {
+		width: 100%;
+	}
+	input, textarea {
+		display: inline-block;
+		margin-bottom: 1em;
+		border: none;
+		background: $lightgray;
+		padding: 1em;
+		@include transition;
+		@extend .nicetype;
+		position: relative;
+		&:hover {
+			background: darken($lightgray, 3);
+		}
+
+		&:invalid{
+			//background: $lightgray;
+			box-shadow: none;
+		}
+
+		&:valid{
+			background: lighten($accent, 20);
+			&:focus, &:active {
+				box-shadow: 0 -6px 0 darken(lighten($accent, 20), 10) inset;
+			}
+			& + .indicator {
+				width: $indicator_width;
+			}
+		}
+	}
+	
+	[type='submit']{
+		@include box($accent);
+		@include metro(0);
+		cursor: pointer;
+	}
+	
+}

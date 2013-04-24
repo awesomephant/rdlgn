@@ -87,8 +87,11 @@
 		a {
 			color: black;
 			font-size: .8em;
-			&:before {content: '('}
-			&:after {content: ')'}
+			border: none;
+		}
+		em {
+			font-style: normal;
+			font-weight: 700;
 		}
 	}
 	.entry-header {
@@ -130,13 +133,6 @@
 		background: $lightgray;
 	}
 	
-	.primary {
-		background: white;
-		@include breakpoint(s){
-			width: 75%;
-			border-right: 1px solid darken($lightgray, 5);
-		}
-	}
 	article{
 		border-bottom: 5px solid $lightgray;
 		margin-bottom: 2em;
@@ -155,12 +151,6 @@
 			
 	}
 	
-	.secondary {
-		@include breakpoint(s){
-			width: 25%;
-			float: right;
-		}
-	}
 }
 
 .read-more {

@@ -18,14 +18,20 @@ $pdf : rgb(248,58,48);
 .nicetype {
     font:{
         family: open sans;
-        size: 1.07em;
     }
-    line-height: 1.6em;
+    line-height: 1.55em;
 }
 
 .shadow {
     box-shadow: 0.0em 0.1em 0.1em -0.08em rgba(190,190,190,0.5);
 }
+
+@mixin calc($property, $expression) { 
+  #{$property}: -moz-calc(#{$expression}); 
+  #{$property}: -o-calc(#{$expression}); 
+  #{$property}: -webkit-calc(#{$expression}); 
+  #{$property}: calc(#{$expression}); 
+} 
 
 @mixin breakpoint($point) {
   @if $point == xl {
@@ -90,12 +96,19 @@ $pdf : rgb(248,58,48);
 	transition: $duration $property;
 }
 
-@mixin cols($count){
+@mixin cols($count, $gap: 0){
 	-moz-column-count: $count;
 	-o-column-count: $count;
 	-webkit-column-count: $count;
 	-ms-column-count: $count;
-	-ms-column-count: $count;
+	column-count: $count;
+	
+	-moz-column-gap: $gap;
+	-o-column-gap: $gap;
+	-webkit-column-gap: $gap;
+	-ms-column-gap: $gap;
+	column-gap: $gap;
+
 }
 
 .iconfont {
