@@ -114,7 +114,7 @@ if ( ! function_exists( 'grid_posted_on' ) ) :
  * @since grid 1.0
  */
 function grid_posted_on() {
-	printf( __( '<span class="posted-on"></span><time class="entry-date" datetime="%3$s">%4$s</time></span></span>', 'grid' ),
+	printf( __( '<time class="entry-date" datetime="%3$s">%4$s</time>', 'grid' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
 		esc_attr( get_the_date( 'c' ) ),

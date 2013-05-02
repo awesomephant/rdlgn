@@ -1,7 +1,7 @@
 .home {
 .blog h2 {
 
-	font-family: 'Open Sans';
+	font-family: '$bodyfont';
 	
 }
 .blog article, .news article {
@@ -79,6 +79,7 @@
 }
 
 .intro{
+	background: white;
 	.entry-content {
 		@include breakpoint(l){
 			width: 66%;

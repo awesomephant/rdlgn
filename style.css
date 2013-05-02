@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic);
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic|Open+Sans:400,300,700);
 /*
 Theme Name: Radiologen Konstanz v3
 Theme URI: http://wordpress.org/extend/themes/twentytwelve
@@ -159,7 +159,7 @@ table {
     position: relative; }
     .commentlist article .comment-author cite {
       font-size: 2em;
-      font-family: georgia;
+      font-family: droid serif;
       display: block;
       padding: .6em 0; }
     .commentlist article .comment-author time {
@@ -168,7 +168,7 @@ table {
       color: white;
       font-size: 1.2em;
       padding: 0.7em; }
-      @media (min-width: 40em) {
+      @media (min-width: 50em) {
         .commentlist article .comment-author time {
           left: -5em;
           position: absolute;
@@ -293,50 +293,58 @@ li.comment {
   .alignleft {
     float: left; } }
 
-.single-post .author {
-  display: inline; }
-  .single-post .author a {
-    color: black;
-    font-size: .8em;
-    border: none; }
-  .single-post .author em {
-    font-style: normal;
-    font-weight: 700; }
-.single-post .entry-header h1 {
-  line-height: 1.5em;
-  font-family: georgia; }
-  @media (min-width: 30em) {
-    .single-post .entry-header h1 {
-      font-size: 1.5em; } }
-  @media (min-width: 40em) {
-    .single-post .entry-header h1 {
-      font-size: 1.9em; } }
-  @media (min-width: 50em) {
-    .single-post .entry-header h1 {
-      font-size: 3.5em; } }
-.single-post .entry-header .cat {
-  font-weight: 800;
-  text-transform: uppercase;
-  color: #82a0ff;
-  text-decoration: none; }
-.single-post .entry-header .posted-on {
-  color: gray;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  padding-right: 1em; }
-.single-post .entry-header .meta {
-  padding: 0;
-  font-size: .7em; }
+.entry-meta {
+  border-top: 1px solid #bfbfbf;
+  border-bottom: 1px solid #bfbfbf;
+  margin-bottom: 1em; }
+  .entry-meta span {
+    padding: .8em 0;
+    font-size: 14px;
+    color: #b9b9b9;
+    display: inline-block; }
+  .entry-meta a {
+    text-decoration: none;
+    color: #bfbfbf; }
+  .entry-meta .author a {
+    font-weight: 600;
+    color: black; }
 
-.blog [role='main'] {
-  background: #f9f9f9; }
+.cats {
+  float: right;
+  border-left: 1px solid #bfbfbf;
+  margin-right: 1em; }
+  .cats a {
+    padding-left: 1em; }
+
+.entry-title {
+  font-family: open sans;
+  font-weight: 800;
+  color: #82a0ff;
+  margin-bottom: .5em;
+  line-height: 1.6em; }
+  @media (min-width: 30em) {
+    .entry-title {
+      font-size: 1.5em; } }
+  @media (min-width: 50em) {
+    .entry-title {
+      font-size: 1.9em; } }
+  @media (min-width: 70em) {
+    .entry-title {
+      font-size: 2.5em; } }
+
+.entry-intro {
+  font-family: droid serif;
+  font-size: 2em;
+  line-height: 1.6em; }
+
 .blog article {
   border-bottom: 5px solid #f9f9f9;
   margin-bottom: 2em;
   padding-bottom: 2em; }
 .blog h2 a {
-  font-family: georgia;
+  font-family: open sans;
   font-size: 2em;
+  font-weight: 800;
   text-decoration: none;
   color: #82a0ff;
   line-height: 1.5em; }
@@ -344,19 +352,26 @@ li.comment {
     text-decoration: underline;
     color: #688dff; }
 
-.read-more {
-  color: white;
-  float: none;
-  border: none;
+.blog-title {
   background: #82a0ff;
-  color: .9em;
-  border-radius: 5px;
-  padding: .2em .4em;
-  display: inline-block; }
-  .read-more:hover, .read-more:focus {
+  width: 90px;
+  height: 90px;
+  border-radius: 5em;
+  margin-bottom: 1em;
+  margin-top: 1em; }
+  .blog-title p {
+    margin: 0;
+    text-align: center; }
+  .blog-title .number {
+    font-family: droid serif;
     color: white;
-    text-decoration: underline;
-    background: #688dff; }
+    font-size: 50px;
+    line-height: 1em;
+    margin-bottom: -10px;
+    padding-top: 20px; }
+  .blog-title .unit {
+    color: #cedaff;
+    font-size: 12px; }
 
 #searchform [type='search'] {
   padding: .7em; }
@@ -387,7 +402,7 @@ li.comment {
 .secondary {
   background: #f9f9f9; }
   .secondary h2 {
-    font-family: georgia;
+    font-family: droid serif;
     font-size: 2.3em;
     padding-top: 1em;
     text-align: center;
@@ -398,14 +413,14 @@ li.comment {
 
 .comments {
   padding-right: 2.5%; }
-  @media (min-width: 40em) {
+  @media (min-width: 50em) {
     .comments {
       padding-left: 10%;
       width: 60%;
       float: left;
       border-right: 1px solid #ececec; } }
 
-@media (min-width: 40em) {
+@media (min-width: 50em) {
   .sidebar {
     width: 35%;
     padding-left: 2.5%;
@@ -417,10 +432,10 @@ li.comment {
   @media (min-width: 30em) {
     .page .entry-title {
       font-size: 1.5em; } }
-  @media (min-width: 40em) {
+  @media (min-width: 50em) {
     .page .entry-title {
       font-size: 2em; } }
-  @media (min-width: 50em) {
+  @media (min-width: 70em) {
     .page .entry-title {
       font-size: 2.5em; } }
 
@@ -459,7 +474,7 @@ li.comment {
     font-size: 1.2em;
     border-bottom: 5px solid #f9f9f9;
     display: block; }
-    @media (min-width: 40em) {
+    @media (min-width: 50em) {
       .banner figcaption {
         position: absolute;
         background: #82a0ff;
@@ -470,7 +485,7 @@ li.comment {
         border-bottom: none; } }
 
 .home .blog h2 {
-  font-family: 'Open Sans'; }
+  font-family: '$bodyfont'; }
 .home .blog article, .home .news article {
   border-bottom: 1px solid lightgray;
   padding-bottom: 1em;
@@ -500,7 +515,7 @@ li.comment {
   .home .blog ul, .home .news ul {
     height: 20em;
     overflow-y: scroll; }
-  @media (min-width: 40em) {
+  @media (min-width: 50em) {
     .home .blog, .home .news {
       width: 49%;
       float: left; } }
@@ -532,16 +547,18 @@ li.comment {
       padding: 1em 1em 1em 1em; }
       .home .blog li a:hover, .home .blog li a:focus, .home .news li a:hover, .home .news li a:focus {
         background: white; }
-@media (min-width: 50em) {
-  .home .intro .entry-content {
-    width: 66%; } }
-.home .intro > p {
-  font-size: 1.1em;
-  letter-spacing: .03em; }
-.home .intro p {
-  font-size: 1em;
-  color: #464646;
-  padding: 0; }
+.home .intro {
+  background: white; }
+  @media (min-width: 70em) {
+    .home .intro .entry-content {
+      width: 66%; } }
+  .home .intro > p {
+    font-size: 1.1em;
+    letter-spacing: .03em; }
+  .home .intro p {
+    font-size: 1em;
+    color: #464646;
+    padding: 0; }
 
 .teaser {
   float: left;
@@ -549,13 +566,13 @@ li.comment {
   padding-right: 1em;
   margin-top: 2em;
   padding-bottom: 2em; }
-  @media (min-width: 50em) {
+  @media (min-width: 70em) {
     .teaser {
       padding-left: 1em;
       padding-bottom: 0em; } }
   .teaser:nth-of-type(1) {
     padding-left: 0; }
-  @media (min-width: 50em) {
+  @media (min-width: 70em) {
     .teaser {
       width: 33%; } }
   .teaser h2 {
@@ -601,7 +618,7 @@ li.comment {
     .feeds, .intro {
       padding-left: 2em;
       padding-right: 2em; } }
-  @media (min-width: 40em) {
+  @media (min-width: 50em) {
     .feeds, .intro {
       padding-left: 4em;
       padding-right: 4em; } }
@@ -647,7 +664,7 @@ li.comment {
   color: #3c3c3c; }
 
 .nav-main {
-  position: absolute;
+  position: fixed;
   overflow: visible;
   left: -100%;
   top: 0;
@@ -668,7 +685,7 @@ li.comment {
   @media (min-width: 30em) {
     .nav-main {
       width: 50%; } }
-  @media (min-width: 40em) {
+  @media (min-width: 50em) {
     .nav-main {
       width: 25%; } }
   .nav-active .nav-main {
@@ -694,16 +711,16 @@ li.comment {
   height: 100%;
   left: 100%;
   width: 100%;
+  background: white;
   box-shadow: 14px 0px 25px -32px rgba(0, 0, 0, 0.7);
-  background: #f9f9f9;
-  border-left: 1px solid #ececec;
+  border-left: 1px solid #f9f9f9;
   top: 0;
   z-index: -10; }
   .main-navigation .sub-menu a {
-    border-bottom: 1px solid #ececec; }
+    border-bottom: 1px solid #f6f6f6; }
     .main-navigation .sub-menu a:hover, .main-navigation .sub-menu a:focus {
       color: #82a0ff;
-      background: #f6f6f6; }
+      background: #f9f9f9; }
 
 .page-container {
   -moz-transition: 0.5s all;
@@ -716,6 +733,26 @@ li.comment {
   padding: .5em;
   border-bottom: 1px solid #f9f9f9;
   background: #f9f9f9; }
+.nav-main .searchform {
+  padding: 1em; }
+.nav-main label {
+  display: none; }
+.nav-main [type='search'] {
+  border-radius: 5em;
+  width: 70%;
+  margin: 0 auto;
+  display: inline-block;
+  border: 1px solid #f9f9f9;
+  padding: .5em; }
+.nav-main [type='submit'] {
+  display: inline-block;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  padding: 0.7em;
+  color: white;
+  border: none; }
+  .nav-main [type='submit']:hover, .nav-main [type='submit']:focus {
+    background-color: #ececec; }
 .nav-main button {
   position: relative;
   padding: 0;
@@ -742,7 +779,7 @@ li.comment {
   float: right; }
   .nav-main .nav-close:after {
     content: '\274C'; }
-@media (min-width: 40em) {
+@media (min-width: 50em) {
   .nav-main .nav-back {
     display: none; } }
 .nav-main .nav-back:after {
@@ -801,7 +838,7 @@ footer nav {
   @media (min-width: 30em) {
     footer nav {
       font-size: 1.2em; } }
-  @media (min-width: 40em) {
+  @media (min-width: 50em) {
     footer nav {
       font-size: 1.12em; } }
   footer nav .sub-menu {
@@ -818,7 +855,7 @@ footer nav {
     -webkit-column-gap: 0;
     -ms-column-gap: 0;
     column-gap: 0; } }
-@media (min-width: 40em) {
+@media (min-width: 50em) {
   footer {
     -moz-column-count: 3;
     -o-column-count: 3;
@@ -830,7 +867,7 @@ footer nav {
     -webkit-column-gap: 0;
     -ms-column-gap: 0;
     column-gap: 0; } }
-@media (min-width: 50em) {
+@media (min-width: 70em) {
   footer {
     -moz-column-count: 4;
     -o-column-count: 4;
@@ -1037,6 +1074,9 @@ html {
   /* 2 */
   -ms-text-size-adjust: 100%;
   /* 2 */ }
+
+.page-container > [role="main"] {
+  background: #f9f9f9; }
 
 section {
   padding-bottom: 2em; }
@@ -1261,10 +1301,10 @@ strong {
   margin: 0 auto;
   font-family: open sans, helvetica, arial, sans-serif;
   font-size: 1.7em; }
-  @media (min-width: 40em) {
+  @media (min-width: 50em) {
     .page-container > header {
       font-size: 1.8em; } }
-  @media (min-width: 50em) {
+  @media (min-width: 70em) {
     .page-container > header {
       font-size: 2em; } }
   .page-container > header hgroup {
@@ -1274,7 +1314,7 @@ strong {
     background-size: 8em;
     text-align: center;
     padding: 2.5em 1em 1em 1em; }
-    @media (min-width: 40em) {
+    @media (min-width: 50em) {
       .page-container > header hgroup {
         background-image: url("images/logo_clean.svg");
         background-repeat: no-repeat;
@@ -1292,7 +1332,7 @@ strong {
     font-size: 0.6em;
     line-height: 1.3em;
     color: #969696; }
-    @media (min-width: 40em) {
+    @media (min-width: 50em) {
       .page-container > header h2 {
         width: 70%; } }
 
@@ -1316,7 +1356,7 @@ footer {
   background-position: right 1em center;
   background-size: auto 60%;
   background-repeat: no-repeat; }
-  @media (min-width: 40em) {
+  @media (min-width: 50em) {
     .copyright {
       background-image: url("images/logo_clean.svg"); } }
 
@@ -1331,7 +1371,7 @@ body:not(.home) {
   width: 100%; }
 .page .site-content {
   padding-top: 1em; }
-  @media (min-width: 40em) {
+  @media (min-width: 50em) {
     .page .site-content {
       margin-left: 10%;
       width: 60%; } }
@@ -1363,7 +1403,11 @@ body:not(.home) {
 .primary {
   background: white;
   padding-top: 1em; }
-  @media (min-width: 30em) {
+  @media (min-width: 50em) {
+    .primary {
+      width: 85%;
+      border-right: 1px solid #ececec; } }
+  @media (min-width: 70em) {
     .primary {
       width: 75%;
       border-right: 1px solid #ececec; } }
@@ -1374,6 +1418,16 @@ body:not(.home) {
     .secondary {
       width: 25%;
       float: right; } }
+
+.single-post .secondary {
+  width: 100%;
+  float: none; }
+
+.single-post [role='main'] {
+  background: white; }
+
+.single-post .primary {
+  border-right: none; }
 
 .honcode {
   padding-left: 1em;

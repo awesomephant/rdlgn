@@ -20,7 +20,7 @@
 			width: 98%;
 			margin: 0 auto;
 			display: block;
-			font-family: open sans, sans-serif;
+			font-family: $bodyfont, sans-serif;
 			
 
 			
@@ -98,7 +98,7 @@
 			position: relative;
 			cite {
 				font-size: 2em;
-				font-family: georgia;
+				font-family: $displayfont;
 				display: block;
 				padding: .6em 0;
 			}

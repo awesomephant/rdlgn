@@ -3,6 +3,10 @@ $accent : rgb(130,160,255);
 $lightgray : rgb(249,249,249);
 $pdf : rgb(248,58,48);
 
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic|Open+Sans:400,300,700);
+$bodyfont: open sans;
+$displayfont: droid serif;
+
 @font-face {
     font-family: 'entypo';
     src: url('fonts/entypo.eot');
@@ -17,7 +21,7 @@ $pdf : rgb(248,58,48);
 
 .nicetype {
     font:{
-        family: open sans;
+        family: $bodyfont;
     }
     line-height: 1.55em;
 }
@@ -35,13 +39,13 @@ $pdf : rgb(248,58,48);
 
 @mixin breakpoint($point) {
   @if $point == xl {
-    @media (min-width: 60em) { @content; }
+    @media (min-width: 90em) { @content; }
   }
   @if $point == l {
-    @media (min-width: 50em) { @content; }
+    @media (min-width: 70em) { @content; }
   }
   @if $point == m {
-    @media (min-width: 40em) { @content; }
+    @media (min-width: 50em) { @content; }
   }
   @if $point == s {
     @media (min-width: 30em) { @content; }

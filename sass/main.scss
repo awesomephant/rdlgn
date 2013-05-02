@@ -9,7 +9,6 @@ Version: 1.1
 License: All rights reserved
 */
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic);
 @import 'bits';
 @import 'reset';
 @import 'comments';
@@ -32,7 +31,7 @@ License: All rights reserved
     box-sizing: border-box;
 }
 body {
-	font-family:  open sans, sans-serif;
+	font-family:  $bodyfont, sans-serif;
 	border-top: 1.5em solid $yellow;
 }
 html{
@@ -44,6 +43,7 @@ html{
 
 .page-container > [role="main"]{
 	@extend .clearfix;
+	background: $lightgray;
  
 }
 section {
@@ -150,7 +150,7 @@ strong {
 	
 	margin: 0 auto;
 		font :{
-			family: open sans, helvetica, arial, sans-serif;
+			family: $bodyfont, helvetica, arial, sans-serif;
 			size: 1.7em;
 		}
 	@include breakpoint(l){
@@ -281,7 +281,11 @@ body:not(.home){
 .primary {
 	background: white;
 	padding-top: 1em;
-	@include breakpoint(s){
+	@include breakpoint(m){
+		width: 85%;
+		border-right: 1px solid darken($lightgray, 5);
+	}
+	@include breakpoint(l){
 		width: 75%;
 		border-right: 1px solid darken($lightgray, 5);
 	}
@@ -294,7 +298,18 @@ body:not(.home){
 	}
 	padding: 1em;
 }
-	
+
+.single-post .secondary{
+	width: 100%;
+	float: none;
+}
+.single-post [role='main']{
+	background: white;
+}
+
+.single-post .primary {
+	border-right: none;
+}	
 
 //===========
 //HONCODE====

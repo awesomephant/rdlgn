@@ -40,6 +40,7 @@
 		<button class='nav-back'>zurück</button>
 		<button class='nav-close'>schließen</button>
 	</div>
+	<?php get_search_form(); ?>
 	<nav role="navigation" class="site-navigation main-navigation clearfix">	
 				
 		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>

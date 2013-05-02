@@ -86,4 +86,15 @@ $('document').ready(function(){
 		
 	$(".toc").prepend(ToC);
 	
+	var todayDate = new Date();
+	//window.alert(todayDate);
+	/*$(.eventlist li time).each(function(){
+		var eventDateStr = $(this).attr('datetime');
+		var eventDateArr = expireDateStr.split("/");
+		var eventDate = new Date(eventDateArr[2], eventDateArr[0], eventDateArr[1]);
+
+		if(todayDate > eventDate){
+			$(this).addClass('passed');
+		}
+	});*/
 });

@@ -81,57 +81,59 @@
 	
 }
 
-.single-post {
-	.author{
-		display: inline;
-		a {
-			color: black;
-			font-size: .8em;
-			border: none;
-		}
-		em {
-			font-style: normal;
-			font-weight: 700;
-		}
+.entry-meta {
+	border-top: 1px solid darken(lightgray, 8);
+	border-bottom: 1px solid darken(lightgray, 8);
+	margin-bottom: 1em;
+	span {
+		padding: .8em 0;
+		font-size: 14px;
+		color: darken(lightgray, 10);
+		display: inline-block;
 	}
-	.entry-header {
-		h1 {
-			line-height: 1.5em;
-			font-family: georgia;
-			@include breakpoint(s){
-				font-size: 1.5em;
-			}
-			@include breakpoint(m){
-				font-size: 1.9em;
-			}
-			@include breakpoint(l){
-				font-size: 3.5em;
-			}
-		}
-		.cat {
-			font-weight: 800;
-			text-transform: uppercase;
-			color: $accent;
-			text-decoration: none;
-		}
-		.posted-on{
-			color: gray;
-			padding-top: 1em;
-			padding-bottom: 1em;
-			padding-right: 1em;
-			}
-		.meta {
-			padding: 0;
-			font-size: .7em;
-		}
-
+	a {
+		text-decoration: none;
+		color: darken(lightgray, 8);
 	}
+	
+	.author a{
+		font-weight: 600;
+		color: black;
+	}
+}
 
+.cats {
+	float: right;
+	border-left: 1px solid darken(lightgray, 8);
+	margin-right: 1em;
+	a {
+		padding-left: 1em;
+	}
+}
+.entry-title {
+	font-family: $bodyfont;
+	font-weight: 800;
+	color: $accent;
+	margin-bottom: .5em;
+	line-height: 1.6em;
+	
+	@include breakpoint(s){
+		font-size: 1.5em;
+	}
+	@include breakpoint(m){
+		font-size: 1.9em;
+	}
+	@include breakpoint(l){
+		font-size: 2.5em;
+	}
+}
+	
+.entry-intro {
+	font-family: $displayfont;
+	font-size: 2em;
+	line-height: 1.6em;
 }
 .blog {
-	[role='main']{
-		background: $lightgray;
-	}
 	
 	article{
 		border-bottom: 5px solid $lightgray;
@@ -139,8 +141,9 @@
 		padding-bottom: 2em;
 	}
 	h2 a{
-		font-family: georgia;
+		font-family: $bodyfont;
 		font-size: 2em;
+		font-weight: 800;
 		text-decoration: none;
 		color: $accent;
 		line-height: 1.5em;
@@ -153,21 +156,34 @@
 	
 }
 
-.read-more {
-	color: white;
-	float: none;
-	border: none;
+.blog-title {
 	background: $accent;
-	color: .9em;
-	border-radius: 5px;
-	padding: .2em .4em;
-	display: inline-block;
-	&:hover, &:focus {
+	width: 90px;
+	height: 90px;
+	border-radius: 5em;
+	margin-bottom: 1em;
+	margin-top: 1em;
+	
+	p {
+		margin: 0;
+		text-align: center;
+	}
+	
+	.number {
+		font-family: $displayfont;
 		color: white;
-		text-decoration: underline;
-		background: darken($accent, 5);
+		font-size: 50px;
+		line-height: 1em;
+		margin-bottom: -10px;
+		padding-top: 20px;
+	}
+	
+	.unit {
+		color: lighten($accent, 15);
+		font-size: 12px;
 	}
 }
+
 //SEARCH FORMS
 #searchform {
 	[type='search']{
@@ -187,7 +203,7 @@
 .secondary {
 	background: $lightgray;
 	h2 {
-		font-family: georgia;
+		font-family: $displayfont;
 		font-size: 2.3em;
 		padding-top: 1em;
 		text-align: center;
@@ -209,7 +225,6 @@
 
 	padding-right: 2.5%;
 }
-
 .sidebar {
 	@include breakpoint(m){
 		width: 35%;
