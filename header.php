@@ -40,7 +40,6 @@
 		<button class='nav-back'>zurück</button>
 		<button class='nav-close'>schließen</button>
 	</div>
-	<?php get_search_form(); ?>
 	<nav role="navigation" class="site-navigation main-navigation clearfix">	
 				
 		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
@@ -48,7 +47,7 @@
 	</nav>
 </div>
 	<div class='page-container'>	
-		<header>
+		<header role='banner'>
 			  <hgroup>
                 <h1><a href=" <?php echo home_url(); ?> "><?php bloginfo( 'name' ); ?></a></h1>
                 <h2><?php bloginfo( 'description' ); ?></h2>
@@ -56,5 +55,5 @@
 			<button role='button' class='toggleNav'>Navigation</button>
 		</header>
 	
-		<div role ="main">
+		<main role ="main">
 	

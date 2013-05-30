@@ -4,7 +4,6 @@ Template Name: News
 */
 
 get_header(); ?>
-<h1
 		<div class="primary news" class="content-area">
 			<?php while ( have_posts() ) : the_post(); ?>
 					

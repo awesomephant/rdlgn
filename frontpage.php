@@ -12,7 +12,7 @@ Template Name: Startseite
         <section class="intro">
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'content', 'page' ); ?>
+					<?php //get_template_part( 'content', 'page' ); ?>
 
 				<?php endwhile; // end of the loop. ?>
 			<div class='teaser'>

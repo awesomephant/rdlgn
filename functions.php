@@ -92,7 +92,7 @@ add_action( 'widgets_init', 'grid_widgets_init' );
  * Enqueue scripts and styles
  */
 function grid_scripts() {
-	wp_enqueue_style( 'style', get_stylesheet_uri() );
+	wp_enqueue_style( 'main', get_stylesheet_uri() );
 	
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

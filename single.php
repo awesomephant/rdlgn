@@ -21,7 +21,7 @@ get_header(); ?>
 			</div><!-- #content .site-content -->
 		
 		</div><!-- #primary .content-area -->
-		<section class='secondary'>	
+		<section class='blog-secondary'>	
 		<section class='comments'>
 			<h2><?php comments_number( '', '1 Kommentar', '% Kommentare' ); ?>.
 			</h2>
