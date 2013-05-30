@@ -1,0 +1,29 @@
+footer {	
+	font-size:0.7em;
+	font-weight: normal;
+	padding: 1em;
+	.page-container > & {
+		border-top: 1px solid darken($lightgray, 6);
+	}
+
+}
+
+.copyright {
+	@extend .nicetype;
+	background: $lightgray;
+	border-top: 1px solid lightgray;
+	font-size: 0.9em;
+	color: gray;
+	border-bottom: 0.6em solid $yellow;
+	padding: 1em;
+	@include breakpoint(m){
+		background-image: url('images/logo_clean.svg');
+		}
+	background-position: right 1em center;
+	background-size: auto 60%;
+	background-repeat: no-repeat;
+}
+
+.partners img{
+	height: 4em;
+}

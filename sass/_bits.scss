@@ -1,6 +1,7 @@
 $yellow : #FFF9A6;
 $accent : rgb(130,160,255);
 $lightgray : rgb(249,249,249);
+$gray : darken($lightgray, 10);
 $pdf : rgb(248,58,48);
 
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic|Open+Sans:400,300,700);

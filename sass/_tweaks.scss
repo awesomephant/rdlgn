@@ -1,0 +1,36 @@
+
+
+//===========
+//HONCODE====
+//===========
+
+.honcode {
+	@extend .nicetype;
+	padding-left: 1em;
+	padding-right: 1em;
+	p {
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+	background: $lightgray;
+	max-height: 0;
+	overflow: hidden;
+	@include transition(1.3s, max-height);
+	&.active{
+		max-height: 207em;
+	}
+}
+.show-honcode {
+	@include box($accent);
+	cursor: pointer;
+		&:after {
+			content: 'anzeigen'
+		}
+	&.active {
+		&:after {
+			content: 'ausblenden'
+		}
+	}
+}
+
+section {@extend .clearfix};

@@ -1,0 +1,6 @@
+.comment-meta a, .edit-link a {
+	font-size: .9em;
+	float: right;
+	color: white !important; //Overwrite any other crap
+	@include box(lightgray);
+}

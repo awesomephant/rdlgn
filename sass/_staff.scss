@@ -5,21 +5,33 @@
 	border: 1px solid darken($lightgray, 5);
 	color: gray;
 	margin: .2em;
+	width: 10em;
+	height: 10em;
+	background: $lightgray;
+	position: relative;
 	display: inline-block;
-	border-radius: 5px;
+	overflow: hidden;
 	&:hover, &:focus {
 		box-shadow: 0 0 0 5px $lightgray;
 	}
 	.avatar {
-		width: 5em;
-		height: 5em;
-		display: inline-block;
+		width: 100%;
+		height: 100%;
+		display: block;
 		float: left;
 		margin-right: .8em;
 	}
-	
+	&:hover {
+		.data {
+			bottom: 0;
+		}
+	}
 	.data {
 		padding: .8em;
+		bottom: -5em;
+		background: white;
+		position: absolute;
+		@include transition;
 	}
 	
 	span{
@@ -29,5 +41,19 @@
 		color: rgb(70,70,70);
 		font-weight: 600;
 		margin-bottom: .2em;
+	}
+}
+
+.details {
+	background: yellow;
+	position: absolute;
+	top: 2em;
+	width: 80%;
+	height: 600px;
+	left: 4em;
+	display: none;
+	
+	.details-active & {
+		display: block;
 	}
 }

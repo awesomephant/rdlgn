@@ -1,0 +1,308 @@
+.toggleNav {
+		@include box($accent);
+		text-align: left;
+		padding-right: 4em;
+		position: fixed;
+		z-index: 10;
+		top: 0;
+		left: 0;
+		@include breakpoint(l){
+			display: none;
+
+		}
+		&:after {
+			@extend .iconfont;
+			content: '\2630';
+			position: absolute;
+			font-size: 5em;
+			top: -.5em;
+			right: .2em;
+			
+		}
+}	
+
+.hasChild{
+	&:after {
+		@extend .iconfont;
+		content: '\E75E';
+		display: inline-block;
+		width: 30%;
+		float: right;
+		position: relative;
+		top: -.5em;
+		text-align: right;
+		color: rgb(60,60,60);
+		@include breakpoint(l){
+			content: '';
+		}
+	}
+
+}
+.nav-main{  
+	position: fixed;
+	overflow: visible;
+	left: -100%;
+	top: 0;
+	
+	@include breakpoint(l){
+		position: static;
+		width: 100%;
+		height: auto;
+		padding-left: 2.5em;
+	}
+	z-index: 20;
+	height: 100%;
+	width: 95%;
+	@include breakpoint(s){
+		width: 50%;
+	}
+	background: white;
+	border-right: 1px solid $lightgray;
+	box-shadow: 14px 0px 25px -32px rgba(black, .7);
+	@include transition();
+	
+	.nav-active &{
+		left: 0;
+	}
+	a {
+		text-decoration: none;
+		padding: 1.1em 1.7em;
+		display: block;
+		color: rgb(50,50,50);
+		border-bottom: 1px solid $lightgray;
+		font-size: .9em;
+		&:hover, &:focus {
+			background: $lightgray;
+		}
+		@include breakpoint(l){
+			float: left;
+		}
+	}
+
+	div > ul > li {
+		position: static;
+	}
+}
+
+.nav-main .active + .sub-menu{
+	display: block;
+	@include breakpoint(l){
+		max-height: 500px;
+		position: absolute;
+		bottom: 0;
+	}
+}
+
+.main-navigation > li {
+	position: relative;
+}
+	
+.sub-menu {
+	display: none;		
+	position: absolute;
+	height: 100%;
+	@include breakpoint(l){
+		display: block;
+		left: 0;
+		max-height: 0;
+		overflow: hidden;
+		@include transition;
+		z-index: 10;
+		top: 5.45em;
+		max-height: 0;
+	}
+	left: 100%;
+	width: 100%;
+	background: $lightgray;
+	box-shadow: 14px 0px 25px -32px rgba(black, .7);
+	border-left: 1px solid darken($lightgray, 0);
+	top: 0;
+	z-index: -10;
+		
+	a {
+		border-bottom: 1px solid darken($lightgray, 1);
+		&:hover, &:focus {
+			color: $accent;
+			background: darken($lightgray, 2);
+		}
+	}
+}
+@include breakpoint(l){
+	.sub-menu{
+		li {float: left; width: 25%; position: static;
+		a {font-size: 1.1em; color: $accent}
+		.sub-menu{ 
+		position: static;
+		box-shadow: none;
+		max-height: none;
+			li {float: none;width: 100%;display: block;}
+			a {display: block; float: none; font-size: .8em; color: rgb(100,100,100);}
+		}
+		}
+	}
+}
+	
+.page-container {
+	@include transition(.3s);
+}
+body{overflow-x: hidden;}
+.nav-active .page-container {
+	@include moveX(120px);
+}
+.nav-main {
+	@include breakpoint(l){width: 100%;}
+	.controls {
+		padding: .5em;
+		border-bottom: 1px solid $lightgray;
+		@extend .clearfix;
+		background: $lightgray;
+		@include breakpoint(l){display: none;}
+	}
+	.searchform {
+		padding: 1em;
+	}
+	label {
+		display: none;
+	}
+	[type='search']{
+		border-radius: 5em;
+		width: 70%;
+		margin: 0 auto;
+		display: inline-block;
+		border: 1px solid $lightgray;
+		padding: .5em;
+	}
+	[type='submit']{
+		@include box($lightgray);
+	}
+	button{
+		&:after {
+			@extend .iconfont;
+			position: absolute;
+			top: -.4em;
+			left: 38%;
+			font-size: 2.5em;
+			text-indent: 0;
+			color: darken($lightgray, 30);
+		}
+		position: relative;
+		padding: 0;
+		background: lighten($lightgray, 5);
+		border: 1px solid darken($lightgray, 5);
+		text-indent: -9999px;
+		height: 2.5em;
+		width: 3.5em;
+		display: inline-block;
+		vertical-align: center;
+		cursor: pointer;
+		&:hover, &:focus {
+			background: darken($lightgray, 2);
+			border: 1px solid darken($lightgray, 10);
+			color: darken($lightgray, 40);
+		}
+
+	}
+	
+	.nav-close{
+		float: right;
+		&:after {
+			content: '\274C';
+		}
+	}
+	.nav-back{
+		@include breakpoint(l){display: none;}
+		.nav-lvl-0 &{display: none};
+		&:after {
+			content: '\21B0';
+		}
+	}
+}
+.main-navigation{
+	@include transition();
+	@include breakpoint(sr){
+		.nav-lvl-1 &{@include moveX(-100%);}
+		.nav-lvl-2 &{@include moveX(-200%);}
+	}
+	@include breakpoint(l){
+		width: 100%;
+		position: static;
+	}
+}
+
+.current_page_item {
+	box-shadow: 5px 0 0 0 $accent inset;
+	@include breakpoint(l){box-shadow: 0 4px 0 0 $accent;}
+}
+ 
+
+
+.toc nav {
+	list-style:none;
+	background: $lightgray;
+	display: inline-block;
+	padding: 1em;
+	@include breakpoint(s){
+		float: right;
+		margin-right: 1em;
+		}
+	
+	a {
+		background: $lightgray;
+		margin: 0;
+		font-size: 0.9em;
+		color: gray;
+		&:hover, &:focus {
+			color: rgb(50,50,50);
+		}
+		text-decoration: none;
+		display: block;
+		float: none;
+		padding: .5em;
+		margin-top: 0.5em;
+	}
+}
+h3:target {
+	animation: highlight 1s ease;
+}
+
+@keyframes highlight {
+from { background: $yellow; }
+to { background: white; }
+}
+
+footer {
+	
+	nav {
+		font-size: 1.3em;
+		@include breakpoint(s){
+			font-size: 1.2em;
+		}
+		@include breakpoint(m){
+			font-size: 1.12em;
+		}
+		
+		.sub-menu {
+			display: block;
+		}
+	}
+	@include breakpoint(s){ @include cols(2);}
+	@include breakpoint(m){	@include cols(3);}
+	@include breakpoint(l){ @include cols(4);}
+	.menu > ul > li > a {
+		color: rgb(50,50,50);
+		text-align: center;
+		font-weight: 500;
+		@include breakpoint(s){text-align: left;}
+		margin-top: 1em;
+	}
+	a{
+		text-decoration: none;
+		color: $accent;
+		padding: .7em;
+		display: block; 
+		&:hover, &:focus {
+			text-decoration: underline;
+			background: $lightgray;
+		}
+	}
+}
