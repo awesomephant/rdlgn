@@ -88,7 +88,7 @@
 	p {
         font-size: 1em;
 		@extend .nicetype;
-    	color: rgb(70,70,70);
+    	color: $body-color;
      	padding: 0;
         
     }

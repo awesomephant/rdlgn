@@ -18,24 +18,24 @@ License: All rights reserved
   font-style: normal;
 }
 
-/* line 23, sass/_bits.scss */
+/* line 24, sass/_bits.scss */
 .nicetype, .honcode, .home .intro p, .contactform input, .contactform textarea, .copyright, article p, p {
   font-family: open sans;
   line-height: 1.55em;
 }
 
-/* line 30, sass/_bits.scss */
-.shadow, .wp-caption {
+/* line 31, sass/_bits.scss */
+.shadow {
   box-shadow: 0em 0.1em 0.1em -0.08em rgba(190, 190, 190, 0.5);
 }
 
-/* line 119, sass/_bits.scss */
+/* line 120, sass/_bits.scss */
 .iconfont, .teaser a:after, .comment-count:before, .contactform .indicator, .toggleNav:after, .hasChild:after, .nav-main button:after {
   font-family: 'entypo';
   font-size: 2em;
 }
 
-/* line 160, sass/_bits.scss */
+/* line 161, sass/_bits.scss */
 .clearfix:before, section:before, .page-container > [role="main"]:before, .teaser:before, .eventlist li:before, .nav-main .controls:before, .comments form:before, .commentlist .reply a:before,
 .clearfix:after,
 section:after,
@@ -50,12 +50,12 @@ section:after,
   clear: both;
 }
 
-/* line 165, sass/_bits.scss */
+/* line 166, sass/_bits.scss */
 .clearfix:after, section:after, .page-container > [role="main"]:after, .teaser:after, .eventlist li:after, .nav-main .controls:after, .comments form:after, .commentlist .reply a:after {
   clear: both;
 }
 
-/* line 168, sass/_bits.scss */
+/* line 169, sass/_bits.scss */
 .clearfix, section, .page-container > [role="main"], .teaser, .eventlist li, .nav-main .controls, .comments form, .commentlist .reply a {
   zoom: 1;
   /* For IE 6/7 (trigger hasLayout) */
@@ -173,7 +173,7 @@ html {
   border: none;
   cursor: pointer;
 }
-/* line 66, sass/_bits.scss */
+/* line 67, sass/_bits.scss */
 .show-honcode:hover, .show-honcode:focus {
   background-color: #688dff;
 }
@@ -184,6 +184,12 @@ html {
 /* line 30, sass/_tweaks.scss */
 .show-honcode.active:after {
   content: "ausblenden";
+}
+
+/* line 38, sass/_tweaks.scss */
+#map-canvas {
+  width: 100%;
+  height: 500px;
 }
 
 /* line 1, sass/_page.scss */
@@ -270,7 +276,7 @@ section h1 {
   color: #606060;
   border-bottom: 4px solid #e7e7e7;
 }
-/* line 66, sass/_bits.scss */
+/* line 67, sass/_bits.scss */
 .banner .banner-link:hover, .banner .banner-link:focus {
   background-color: #ececec;
 }
@@ -466,7 +472,7 @@ strong {
   display: block;
   width: 6em;
 }
-/* line 66, sass/_bits.scss */
+/* line 67, sass/_bits.scss */
 .home .blog article p a:hover, .home .blog article p a:focus, .home .news article p a:hover, .home .news article p a:focus {
   background-color: #688dff;
 }
@@ -559,7 +565,7 @@ strong {
 /* line 88, sass/_home.scss */
 .home .intro p {
   font-size: 1em;
-  color: #464646;
+  color: #3c3c3c;
   padding: 0;
 }
 
@@ -609,7 +615,7 @@ strong {
   border: none;
   padding-right: 1.5em;
 }
-/* line 66, sass/_bits.scss */
+/* line 67, sass/_bits.scss */
 .teaser a:hover, .teaser a:focus {
   background-color: #688dff;
 }
@@ -769,7 +775,7 @@ strong {
 .eventlist time span {
   font-size: .9em;
 }
-/* line 66, sass/_bits.scss */
+/* line 67, sass/_bits.scss */
 .eventlist time:hover, .eventlist time:focus {
   background-color: #688dff;
 }
@@ -921,11 +927,11 @@ strong {
   cursor: pointer;
   cursor: pointer;
 }
-/* line 66, sass/_bits.scss */
+/* line 67, sass/_bits.scss */
 .contactform [type='submit']:hover, .contactform [type='submit']:focus {
   background-color: #688dff;
 }
-/* line 129, sass/_bits.scss */
+/* line 130, sass/_bits.scss */
 .contactform [type='submit']:hover {
   box-shadow: 0 0 0 0.3em rgba(255, 255, 255, 0.5) inset;
 }
@@ -945,7 +951,7 @@ strong {
   top: 0;
   left: 0;
 }
-/* line 66, sass/_bits.scss */
+/* line 67, sass/_bits.scss */
 .toggleNav:hover, .toggleNav:focus {
   background-color: #688dff;
 }
@@ -1198,7 +1204,7 @@ body {
   color: white;
   border: none;
 }
-/* line 66, sass/_bits.scss */
+/* line 67, sass/_bits.scss */
 .nav-main [type='submit']:hover, .nav-main [type='submit']:focus {
   background-color: #ececec;
 }
@@ -1778,7 +1784,7 @@ em {
   color: white;
   border: none;
 }
-/* line 66, sass/_bits.scss */
+/* line 67, sass/_bits.scss */
 .comment-meta a:hover, .comment-meta a:focus, .edit-link a:hover, .edit-link a:focus {
   background-color: #c6c6c6;
 }
@@ -1831,44 +1837,43 @@ em {
 
 /* line 41, sass/_blog.scss */
 .wp-caption {
-  margin: 1em;
   padding: .2em;
   background: #f9f9f9;
 }
 
-/* line 48, sass/_blog.scss */
+/* line 46, sass/_blog.scss */
 .wp-caption-text {
   padding: 0.5em;
   font-size: .8em;
   counter-increment: figs;
   margin-bottom: 0 !important;
 }
-/* line 54, sass/_blog.scss */
+/* line 52, sass/_blog.scss */
 .wp-caption-text:before {
   content: "fig. " counter(figs) " ";
   font-weight: bold;
 }
 
-/* line 60, sass/_blog.scss */
+/* line 58, sass/_blog.scss */
 .single article, .page article {
   counter-reset: figs;
 }
-/* line 62, sass/_blog.scss */
+/* line 60, sass/_blog.scss */
 .single article p, .page article p {
   color: #323232;
   margin-bottom: 1em;
 }
-/* line 67, sass/_blog.scss */
+/* line 65, sass/_blog.scss */
 .single article ul, .page article ul {
   list-style: circle outside;
   padding-left: 1em;
   line-height: 1.6em;
 }
-/* line 71, sass/_blog.scss */
+/* line 69, sass/_blog.scss */
 .single article ul li, .page article ul li {
   margin-bottom: 0.2em;
 }
-/* line 75, sass/_blog.scss */
+/* line 73, sass/_blog.scss */
 .single article h2, .page article h2 {
   padding-top: 1em;
   padding-bottom: 1em;
@@ -1879,48 +1884,48 @@ em {
 }
 
 @media (min-width: 40em) {
-  /* line 85, sass/_blog.scss */
+  /* line 83, sass/_blog.scss */
   .alignleft {
     float: left;
   }
 }
 
-/* line 92, sass/_blog.scss */
+/* line 90, sass/_blog.scss */
 .entry-meta {
   border-top: 1px solid #bfbfbf;
   border-bottom: 1px solid #bfbfbf;
   margin-bottom: 1em;
 }
-/* line 96, sass/_blog.scss */
+/* line 94, sass/_blog.scss */
 .entry-meta span {
   padding: .8em 0;
   font-size: 14px;
   color: #b9b9b9;
   display: inline-block;
 }
-/* line 102, sass/_blog.scss */
+/* line 100, sass/_blog.scss */
 .entry-meta a {
   text-decoration: none;
   color: #bfbfbf;
 }
-/* line 107, sass/_blog.scss */
+/* line 105, sass/_blog.scss */
 .entry-meta .author a {
   font-weight: 600;
   color: black;
 }
 
-/* line 113, sass/_blog.scss */
+/* line 111, sass/_blog.scss */
 .cats {
   float: right;
   border-left: 1px solid #bfbfbf;
   margin-right: 1em;
 }
-/* line 117, sass/_blog.scss */
+/* line 115, sass/_blog.scss */
 .cats a {
   padding-left: 1em;
 }
 
-/* line 121, sass/_blog.scss */
+/* line 119, sass/_blog.scss */
 .entry-title {
   font-family: open sans;
   font-weight: 800;
@@ -1929,38 +1934,38 @@ em {
   line-height: 1.6em;
 }
 @media (min-width: 30em) {
-  /* line 121, sass/_blog.scss */
+  /* line 119, sass/_blog.scss */
   .entry-title {
     font-size: 1.5em;
   }
 }
 @media (min-width: 50em) {
-  /* line 121, sass/_blog.scss */
+  /* line 119, sass/_blog.scss */
   .entry-title {
     font-size: 1.9em;
   }
 }
 @media (min-width: 70em) {
-  /* line 121, sass/_blog.scss */
+  /* line 119, sass/_blog.scss */
   .entry-title {
     font-size: 2.5em;
   }
 }
 
-/* line 139, sass/_blog.scss */
+/* line 137, sass/_blog.scss */
 .entry-intro {
   font-family: droid serif;
   font-size: 2em;
   line-height: 1.6em;
 }
 
-/* line 146, sass/_blog.scss */
+/* line 144, sass/_blog.scss */
 .blog article {
   border-bottom: 5px solid #f9f9f9;
   margin-bottom: 2em;
   padding-bottom: 2em;
 }
-/* line 151, sass/_blog.scss */
+/* line 149, sass/_blog.scss */
 .blog h2 a {
   font-family: open sans;
   font-size: 2em;
@@ -1969,13 +1974,13 @@ em {
   color: #82a0ff;
   line-height: 1.5em;
 }
-/* line 158, sass/_blog.scss */
+/* line 156, sass/_blog.scss */
 .blog h2 a:hover, .blog h2 a:focus {
   text-decoration: underline;
   color: #688dff;
 }
 
-/* line 167, sass/_blog.scss */
+/* line 165, sass/_blog.scss */
 .blog-title {
   background: #82a0ff;
   width: 90px;
@@ -1984,12 +1989,12 @@ em {
   margin-bottom: 1em;
   margin-top: 1em;
 }
-/* line 175, sass/_blog.scss */
+/* line 173, sass/_blog.scss */
 .blog-title p {
   margin: 0;
   text-align: center;
 }
-/* line 180, sass/_blog.scss */
+/* line 178, sass/_blog.scss */
 .blog-title .number {
   font-family: droid serif;
   color: white;
@@ -1998,17 +2003,17 @@ em {
   margin-bottom: -10px;
   padding-top: 20px;
 }
-/* line 189, sass/_blog.scss */
+/* line 187, sass/_blog.scss */
 .blog-title .unit {
   color: #cedaff;
   font-size: 12px;
 }
 
-/* line 197, sass/_blog.scss */
+/* line 195, sass/_blog.scss */
 #searchform [type='search'] {
   padding: .7em;
 }
-/* line 200, sass/_blog.scss */
+/* line 198, sass/_blog.scss */
 #searchform [type='submit'] {
   display: inline-block;
   cursor: pointer;
@@ -2023,26 +2028,26 @@ em {
   transition: 0.3s all;
   cursor: pointer;
 }
-/* line 66, sass/_bits.scss */
+/* line 67, sass/_bits.scss */
 #searchform [type='submit']:hover, #searchform [type='submit']:focus {
   background-color: #688dff;
 }
-/* line 129, sass/_bits.scss */
+/* line 130, sass/_bits.scss */
 #searchform [type='submit']:hover {
   box-shadow: 0 0 0 0.3em rgba(255, 255, 255, 0.5) inset;
 }
 
-/* line 206, sass/_blog.scss */
+/* line 204, sass/_blog.scss */
 .comments, .sidebar {
   font-size: .8em;
 }
 
-/* line 210, sass/_blog.scss */
+/* line 208, sass/_blog.scss */
 .comments {
   padding-right: 2.5%;
 }
 @media (min-width: 50em) {
-  /* line 210, sass/_blog.scss */
+  /* line 208, sass/_blog.scss */
   .comments {
     padding-left: 10%;
     width: 60%;
@@ -2052,7 +2057,7 @@ em {
 }
 
 @media (min-width: 50em) {
-  /* line 221, sass/_blog.scss */
+  /* line 219, sass/_blog.scss */
   .sidebar {
     width: 35%;
     padding-left: 2.5%;
@@ -2131,7 +2136,7 @@ em {
   font-size: .9em;
   margin: 0;
 }
-/* line 66, sass/_bits.scss */
+/* line 67, sass/_bits.scss */
 .commentlist .reply a:hover, .commentlist .reply a:focus {
   background-color: #688dff;
 }

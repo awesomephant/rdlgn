@@ -39,10 +39,7 @@
 }
 
 .wp-caption {
-	margin: 1em;
-	padding: .2em;
 	background: $lightgray;
-	@extend .shadow;
 }
 
 .wp-caption-text {
@@ -90,8 +87,8 @@
 }
 
 .entry-meta {
-	border-top: 1px solid darken(lightgray, 8);
-	border-bottom: 1px solid darken(lightgray, 8);
+	border-top: 1px solid $gray;
+	border-bottom: 1px solid $gray;
 	margin-bottom: 1em;
 	span {
 		padding: .8em 0;
@@ -112,7 +109,7 @@
 
 .cats {
 	float: right;
-	border-left: 1px solid darken(lightgray, 8);
+	border-left: 1px solid $gray;
 	margin-right: 1em;
 	a {
 		padding-left: 1em;
@@ -208,6 +205,8 @@
 }
 
 .comments {
+	padding-right: 2.5%;
+
 	@include breakpoint(m){
 		padding-left: 10%;
 		width: 60%;
@@ -215,8 +214,6 @@
 		border-right: 1px solid darken($lightgray, 5);
 
 	}
-
-	padding-right: 2.5%;
 }
 .sidebar {
 	@include breakpoint(m){
