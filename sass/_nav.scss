@@ -218,6 +218,10 @@ body{overflow-x: hidden;}
 	}
 }
 .main-navigation{
+	.current_page_item a{
+		box-shadow: 5px 0 0 0 $accent inset;
+		@include breakpoint(l){box-shadow: 0 4px 0 0 $accent;}
+	}
 	@include transition();
 	@include breakpoint(sr){
 		.nav-lvl-1 &{@include moveX(-100%);}
@@ -227,13 +231,7 @@ body{overflow-x: hidden;}
 		width: 100%;
 		position: static;
 	}
-}
-
-.current_page_item {
-	box-shadow: 5px 0 0 0 $accent inset;
-	@include breakpoint(l){box-shadow: 0 4px 0 0 $accent;}
-}
- 
+} 
 
 
 .toc nav {
@@ -271,7 +269,9 @@ to { background: white; }
 }
 
 footer {
-	
+	.current_page_item {
+		background: $lightgray;
+	}
 	nav {
 		font-size: 1.3em;
 		@include breakpoint(s){
