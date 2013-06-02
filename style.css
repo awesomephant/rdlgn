@@ -288,13 +288,14 @@ section h1 {
 .banner figcaption {
   position: static;
   background: #f9f9f9;
+  font-family: droid serif;
   bottom: 1em;
-  right: 1em;
+  right: 0;
   left: auto;
   line-height: 1.3em;
-  max-width: 25em;
-  font-weight: 400;
+  max-width: 28em;
   padding: .5em;
+  padding-right: 2em;
   font-size: 1.2em;
   border-bottom: 5px solid #f9f9f9;
   display: block;
@@ -303,10 +304,9 @@ section h1 {
   /* line 53, sass/_page.scss */
   .banner figcaption {
     position: absolute;
-    background: #82a0ff;
-    color: #fafafa;
+    background: white;
+    color: #3c3c3c;
     text-align: right;
-    box-shadow: 0 0.2em 0 0 #9bb3ff;
     font-size: 1.4em;
     border-bottom: none;
   }
